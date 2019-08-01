@@ -1,38 +1,3 @@
-# Updates
-
-## 26/04
-
-1. Added support for multi dimensional input in the adaptive_k algorithm. The algorithm is still very slow for the moment, it remains to be improved.
-2. There was some modifications for the specification of the bounds, please have a look at **multi_dim_output.json** or **trajectory.json** for an example.
-
-## 25/04
-
-1. According to Angelika's email, I added a printing function for synapses. It is inherited by all algorithms class, and can be called with **self.print_probs(probs,input_shape)**
-2. I implemented the algorithm for trajectories in **trajectory.py**. For an example of experiment file, please refer to **trajectories.json**.
-
-## 24/04
-
-1. I added a 'list' construct to simply specification of grid search. It can be used for algorithms, functions, mappings, etc... It looks as follows
-```json
-"algorithms":
-	[
-		{	
-			"type":"list",
-			"name": ["adaptiveK"],
-			"alpha": [0.03,0.01],
-			"counter threshold": [10,50],
-			"conf coeff": [3,5], 
-			"error coeff": [1,1.3],
-			"mode":["average"]
-		}
-	]
-```
-2. The feedback can now be specified (it can be a Ln norm for every value of n). Have a look at **throw_ball_feedback.json** for instance
-3. The adaptivek now takes a "mode" parameter whose value is either "average" or "exponential". 
-"exponential" is the initial version of the algorithm, "average" resets the average performance for a synapse in each phase. 
-In the "average" mode, "alpha synapse" is irrelevant
-4. Function with arbitrary multi dimensional outputs are supported. Please have a look at **multi_dim_output.json**
-
 # Organization of the repository
 
 The **simple_functions** folder contains the code used to generate the plots for supervised learning use cases.
