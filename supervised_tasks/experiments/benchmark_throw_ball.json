@@ -1,0 +1,86 @@
+{
+	"common":{
+		"name": "benchmark_throw_ball",
+		"runs": 10,
+		"M": 1032,
+		"n test":500,
+		"step test":32,
+		"n cross":1000
+	},
+	"functions":
+	[
+		{ 
+			"name": "identity",
+			"legend":"Throw Ball",
+			"input dimension":1,
+			"input bounds": [[0,1]],
+			"output bounds":[0,1]
+		}
+	],
+	"algorithms":
+	[
+		{
+			"type":"list",
+			"name": "reinforce",
+			"legend":"Reinforce",
+			"width layers":100,
+			"coeff":[0.4],
+			"alpha error":[0.03]
+			
+		},
+		{
+			"type":"list",
+			"name": "perceptron2",
+			"legend":["MLP, backprop, std. par."],
+			"batch size":[32],
+			"width layers":[100],
+			"learning rate":[0.01],
+			"epochs":[1]
+		},
+		{
+			"type":"list",
+			"name": "perceptron",
+			"legend":["MLP, backprop, opt. par."],
+			"batch size":[1],
+			"width layers":[100],
+			"learning rate":[0.3,0.1,0.],
+			"epochs":[1]
+		},
+		{
+			"type":"list",
+			"name": "MultiFloTheory1",
+			"legend":"Bump",
+			"alpha": 0.1,
+			"alpha synapse":0.5,
+			"counter threshold":2,
+			"counter neuron threshold":[10],
+			"conf coeff":3, 
+			"error coeff":1.0,
+			"mode":"exponential",
+			"prune_constant":3,
+			"k output factor":4.0, 
+			"k input factor":4.0, 
+			"output_k_div_coeff":2,
+			"minimal_number_synapses":5,
+			"init error":0.4
+		}
+	],
+	"mappings":
+	[
+		{
+			"input": {
+				"n":100,
+				"type":"linear"
+			},
+			"output": {
+
+				"n":100,
+				"type":"throw ball", 
+				"grid":"true",
+				"bounds":[[-0.1,1.4],[-0.1,1.3]]
+			}
+		}
+	]
+	
+}
+

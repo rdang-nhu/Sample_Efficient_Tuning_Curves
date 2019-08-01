@@ -1,0 +1,33 @@
+{
+	"common":{
+		"name":"pendulum",
+		"runs":10,
+		"eps":1500
+	},
+	"envs":[
+
+		{
+		"name":"InvertedPendulum-v2"
+		}
+	],
+	"algos":[
+		{
+			"type":"list",
+			"name":"bump",
+			"nin_per_dim":20,
+			"non":50,
+			"k in":[3],
+			"k out":[7,9],
+			"frame_skip":1,
+			"alpha policy":[0.003],
+			"left bounds":[[-1.0,-0.21,-2.5,-5.0]],
+			"right bounds":[[1.0,0.21,2.5,5.0]],
+			"value function":1,
+			"n steps":[4],
+			"alpha value function":[0.5],
+			"init value":[120,140],
+			"alpha reward":0.3
+		}
+
+	]
+}

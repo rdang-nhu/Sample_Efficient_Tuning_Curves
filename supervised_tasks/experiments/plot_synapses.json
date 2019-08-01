@@ -1,0 +1,58 @@
+{
+	"common":{
+		"name": "plot_synapses",
+		"runs": 10,
+		"M": 1501,
+		"n test":100,
+		"step test":100,
+		"n cross":1000
+	},
+	"functions":
+	[
+		{ 
+			"name": "polynomial",
+			"legend":"Second-Order Polynomial",
+			"input dimension":1,
+			"coeffs": [1,-3,1],
+			"input bounds": [[0,3]],
+			"output bounds":[-1.4,1.2]
+		}
+	],
+	"algorithms":
+	[
+		{
+			"type":"list",
+			"name": "MultiFloTheory1",
+			"legend":"Bump",
+			"alpha": 0.1,
+			"alpha synapse":0.5,
+			"counter threshold":2,
+			"counter neuron threshold":[10],
+			"conf coeff":3, 
+			"error coeff":1.0,
+			"mode":"exponential",
+			"prune_constant":[3],
+			"k output factor":[3.0], 
+			"k input factor":[9.0],
+			"output_k_div_coeff":2,
+			"minimal_number_synapses":15,
+			"plot synapses":1,
+			"steps plot":[[0,10,30,50,100,150,200,300,400,500,700,900,1100,1300,1500]]
+		}
+	],
+	"mappings":
+	[
+		{
+			"input": {
+				"n":100,
+				"type":"linear"
+			},
+			"output": {
+				"n":100,
+				"type":"linear"
+			}
+		}
+	]
+	
+}
+

@@ -1,0 +1,29 @@
+{
+	"common":{
+		"name":"car",
+		"runs":10,
+		"eps":200
+	},
+	"envs":[
+
+		{
+		"name":"MountainCarContinuous-v0"
+		}
+	],
+	"algos":[
+		{
+			"name":"bump",
+			"nin_per_dim":50,
+			"non":100,
+			"k":5,
+			"frame_skip":1,
+			"alpha policy":0.1,
+			"value function":1,
+			"n steps":4,
+			"alpha value function":0.5,
+			"init value":1,
+			"alpha reward":0.3
+		}
+
+	]
+}

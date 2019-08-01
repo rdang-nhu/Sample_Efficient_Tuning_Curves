@@ -1,0 +1,1000 @@
+[10:29:23]  Episode :  0  steps :  742  reward :  52.6826260269 noise :  1.0
+Steps/minutes :  16665.0748695
+[10:29:27]  Episode :  1  steps :  999  reward :  -8.62775393138 noise :  0.015962406406
+Steps/minutes :  16623.8368362
+[10:29:31]  Episode :  2  steps :  999  reward :  -15.7746716769 noise :  0.573046734185
+Steps/minutes :  16151.4196189
+[10:29:34]  Episode :  3  steps :  999  reward :  -20.9707324557 noise :  0.573105928643
+Steps/minutes :  16196.2111107
+[10:29:38]  Episode :  4  steps :  999  reward :  -19.0266707161 noise :  0.542899944195
+Steps/minutes :  16237.3332375
+[10:29:42]  Episode :  5  steps :  999  reward :  -3.29015916621 noise :  0.142078576016
+Steps/minutes :  16109.0037424
+[10:29:46]  Episode :  6  steps :  999  reward :  -5.47384107863 noise :  0.31065251058
+Steps/minutes :  16137.6310824
+[10:29:49]  Episode :  7  steps :  999  reward :  -6.18930449232 noise :  0.354297237662
+Steps/minutes :  16219.182734
+[10:29:53]  Episode :  8  steps :  999  reward :  -27.1361940559 noise :  0.985936149507
+Steps/minutes :  16282.2211891
+[10:29:56]  Episode :  9  steps :  999  reward :  -22.0681380901 noise :  0.975654787427
+Steps/minutes :  16335.5517778
+[10:30:00]  Episode :  10  steps :  999  reward :  -2.59620680487 noise :  0.171183750019
+Steps/minutes :  16372.7732094
+[10:30:04]  Episode :  11  steps :  999  reward :  -18.8332693725 noise :  0.79552847542
+Steps/minutes :  16406.7995746
+[10:30:07]  Episode :  12  steps :  999  reward :  -27.59103106 noise :  0.859580799281
+Steps/minutes :  16435.9162585
+[10:30:11]  Episode :  13  steps :  999  reward :  -18.0359449807 noise :  0.208251373403
+Steps/minutes :  16433.5434332
+[10:30:12]  Episode :  14  steps :  373  reward :  82.7288936531 noise :  0.714423437274
+Steps/minutes :  16429.5620248
+[10:30:13]  Episode :  15  steps :  168  reward :  91.8303997683 noise :  0.917445046015
+Steps/minutes :  16433.9904398
+[10:30:15]  Episode :  16  steps :  601  reward :  75.1978841938 noise :  0.110883156224
+Steps/minutes :  16423.4789359
+[10:30:16]  Episode :  17  steps :  262  reward :  90.4194050511 noise :  0.643913606229
+Steps/minutes :  16423.3578449
+[10:30:18]  Episode :  18  steps :  564  reward :  79.3046539134 noise :  0.31808951379
+Steps/minutes :  16427.9963782
+[10:30:21]  Episode :  19  steps :  941  reward :  79.7457614831 noise :  0.410094481136
+Steps/minutes :  16432.3137377
+[10:30:23]  Episode :  20  steps :  407  reward :  71.7526447542 noise :  0.725546983311
+Steps/minutes :  16437.6641662
+[10:30:24]  Episode :  21  steps :  212  reward :  88.4208232531 noise :  0.0439620999771
+Steps/minutes :  16436.9535051
+[10:30:27]  Episode :  22  steps :  999  reward :  -123.006685765 noise :  0.141112668695
+Steps/minutes :  16425.8089001
+[10:30:29]  Episode :  23  steps :  350  reward :  82.3751933541 noise :  0.367417468329
+Steps/minutes :  16431.1338956
+[10:30:31]  Episode :  24  steps :  696  reward :  68.9714210354 noise :  0.741259730421
+Steps/minutes :  16430.0221604
+[10:30:33]  Episode :  25  steps :  380  reward :  78.7374536411 noise :  0.873320432289
+Steps/minutes :  16424.7221467
+[10:30:36]  Episode :  26  steps :  792  reward :  53.024804399 noise :  0.464432166482
+Steps/minutes :  16428.0264257
+[10:30:37]  Episode :  27  steps :  487  reward :  79.8675158984 noise :  0.907258861605
+Steps/minutes :  16427.6894824
+[10:30:40]  Episode :  28  steps :  827  reward :  45.1076811127 noise :  0.497117431824
+Steps/minutes :  16422.3282406
+[10:30:42]  Episode :  29  steps :  406  reward :  69.6169880928 noise :  0.700244760872
+Steps/minutes :  16416.5793889
+[10:30:44]  Episode :  30  steps :  643  reward :  66.5595383371 noise :  0.0898999684519
+Steps/minutes :  16413.4646727
+[10:30:46]  Episode :  31  steps :  600  reward :  46.4468385246 noise :  0.0848932965808
+Steps/minutes :  16405.8362693
+[10:30:47]  Episode :  32  steps :  128  reward :  90.1127835311 noise :  0.664111532386
+Steps/minutes :  16406.4382923
+[10:30:49]  Episode :  33  steps :  486  reward :  90.2974704138 noise :  0.331959119529
+Steps/minutes :  16400.7145744
+[10:30:50]  Episode :  34  steps :  238  reward :  90.9114978432 noise :  0.696603110606
+Steps/minutes :  16400.6689569
+[10:30:52]  Episode :  35  steps :  543  reward :  77.9263219464 noise :  0.337527027995
+Steps/minutes :  16392.5165811
+[10:30:53]  Episode :  36  steps :  347  reward :  71.9037552832 noise :  0.484353678488
+Steps/minutes :  16386.304085
+[10:30:54]  Episode :  37  steps :  218  reward :  80.6204689379 noise :  0.764787944153
+Steps/minutes :  16384.9178291
+[10:30:54]  Episode :  38  steps :  143  reward :  93.3129685128 noise :  0.470237384315
+Steps/minutes :  16385.3290976
+[10:30:55]  Episode :  39  steps :  279  reward :  79.5490729507 noise :  0.991852117378
+Steps/minutes :  16380.417025
+[10:30:57]  Episode :  40  steps :  444  reward :  67.8603349423 noise :  0.883882110713
+Steps/minutes :  16373.8559539
+[10:30:58]  Episode :  41  steps :  218  reward :  79.6653657524 noise :  0.567154114228
+Steps/minutes :  16371.8061592
+[10:30:59]  Episode :  42  steps :  314  reward :  85.9956486425 noise :  0.916764476419
+Steps/minutes :  16367.0730512
+[10:30:59]  Episode :  43  steps :  129  reward :  92.2885385204 noise :  0.331163090925
+Steps/minutes :  16367.3403662
+[10:31:01]  Episode :  44  steps :  266  reward :  80.2755425944 noise :  0.247108042832
+Steps/minutes :  16334.3564528
+[10:31:03]  Episode :  45  steps :  466  reward :  72.8080593925 noise :  0.993569626537
+Steps/minutes :  16310.2766527
+[10:31:03]  Episode :  46  steps :  196  reward :  89.5705419028 noise :  0.164141108464
+Steps/minutes :  16311.0443762
+[10:31:04]  Episode :  47  steps :  118  reward :  90.4508337256 noise :  0.723548996759
+Steps/minutes :  16311.7453488
+[10:31:05]  Episode :  48  steps :  238  reward :  87.3625314438 noise :  0.0937415430013
+Steps/minutes :  16306.8277259
+[10:31:05]  Episode :  49  steps :  233  reward :  90.5147975727 noise :  0.810244509362
+Steps/minutes :  16307.8741102
+[10:31:06]  Episode :  50  steps :  194  reward :  91.8834820587 noise :  0.0899010536201
+Steps/minutes :  16308.1235565
+[10:31:07]  Episode :  51  steps :  291  reward :  74.0414832654 noise :  0.113283235231
+Steps/minutes :  16302.6870463
+[10:31:08]  Episode :  52  steps :  293  reward :  87.4746096688 noise :  0.13948878915
+Steps/minutes :  16297.0935509
+[10:31:10]  Episode :  53  steps :  500  reward :  67.7265369427 noise :  0.826181227447
+Steps/minutes :  16280.8771255
+[10:31:12]  Episode :  54  steps :  521  reward :  76.9093333579 noise :  0.0362132784515
+Steps/minutes :  16277.2734338
+[10:31:13]  Episode :  55  steps :  146  reward :  91.3885329823 noise :  0.272023129568
+Steps/minutes :  16277.4149717
+[10:31:13]  Episode :  56  steps :  123  reward :  90.893412203 noise :  0.599637963113
+Steps/minutes :  16276.3939181
+[10:31:15]  Episode :  57  steps :  575  reward :  73.2223264598 noise :  0.321088960146
+Steps/minutes :  16273.8099163
+[10:31:16]  Episode :  58  steps :  194  reward :  92.8102920507 noise :  0.276540607416
+Steps/minutes :  16268.1894594
+[10:31:17]  Episode :  59  steps :  207  reward :  87.1589246656 noise :  0.512803509549
+Steps/minutes :  16232.7931904
+[10:31:18]  Episode :  60  steps :  217  reward :  80.7421281353 noise :  0.717680613674
+Steps/minutes :  16233.2646089
+[10:31:20]  Episode :  61  steps :  497  reward :  40.029159313 noise :  0.73803388455
+Steps/minutes :  16219.5981798
+[10:31:21]  Episode :  62  steps :  313  reward :  78.2715530803 noise :  0.892728295985
+Steps/minutes :  16216.0574821
+[10:31:22]  Episode :  63  steps :  175  reward :  89.2234673121 noise :  0.973501751953
+Steps/minutes :  16216.5363142
+[10:31:23]  Episode :  64  steps :  245  reward :  92.3652507747 noise :  0.288324373126
+Steps/minutes :  16212.5699136
+[10:31:24]  Episode :  65  steps :  280  reward :  87.9998986239 noise :  0.239420508814
+Steps/minutes :  16211.1263195
+[10:31:25]  Episode :  66  steps :  309  reward :  86.7145000134 noise :  0.143173445594
+Steps/minutes :  16208.9263953
+[10:31:26]  Episode :  67  steps :  323  reward :  89.3340329507 noise :  0.62383461674
+Steps/minutes :  16201.6921979
+[10:31:27]  Episode :  68  steps :  256  reward :  91.4120158809 noise :  0.302438204056
+Steps/minutes :  16200.5622293
+[10:31:29]  Episode :  69  steps :  399  reward :  76.8597456618 noise :  0.914842777943
+Steps/minutes :  16198.3365006
+[10:31:31]  Episode :  70  steps :  641  reward :  61.1548531656 noise :  0.630412873079
+Steps/minutes :  16192.3717992
+[10:31:32]  Episode :  71  steps :  216  reward :  78.3324928227 noise :  0.557611841167
+Steps/minutes :  16190.5088264
+[10:31:33]  Episode :  72  steps :  177  reward :  92.4796876606 noise :  0.183220098593
+Steps/minutes :  16188.2974064
+[10:31:33]  Episode :  73  steps :  75  reward :  92.3376241306 noise :  0.11999314177
+Steps/minutes :  16188.5901981
+[10:31:33]  Episode :  74  steps :  87  reward :  91.0598977752 noise :  0.54293140821
+Steps/minutes :  16183.77113
+[10:31:33]  Episode :  75  steps :  78  reward :  91.3695709395 noise :  0.625233135282
+Steps/minutes :  16183.319844
+[10:31:34]  Episode :  76  steps :  85  reward :  91.6626632716 noise :  0.485483661697
+Steps/minutes :  16154.1314452
+[10:31:35]  Episode :  77  steps :  155  reward :  92.4021248897 noise :  0.341056378021
+Steps/minutes :  16149.0328376
+[10:31:35]  Episode :  78  steps :  85  reward :  92.377910969 noise :  0.151427502758
+Steps/minutes :  16144.402989
+[10:31:36]  Episode :  79  steps :  156  reward :  92.8982129878 noise :  0.170034263398
+Steps/minutes :  16144.7286429
+[10:31:37]  Episode :  80  steps :  433  reward :  90.3497475043 noise :  0.341453655319
+Steps/minutes :  16144.2961073
+[10:31:38]  Episode :  81  steps :  95  reward :  89.6762768191 noise :  0.619912443487
+Steps/minutes :  16143.654472
+[10:31:38]  Episode :  82  steps :  184  reward :  83.0840468134 noise :  0.978572127943
+Steps/minutes :  16144.4895531
+[10:31:39]  Episode :  83  steps :  272  reward :  91.8248334766 noise :  0.136972106522
+Steps/minutes :  16145.2639168
+[10:31:40]  Episode :  84  steps :  162  reward :  90.8667277786 noise :  0.836026911059
+Steps/minutes :  16143.5251984
+[10:31:41]  Episode :  85  steps :  220  reward :  92.5115661694 noise :  0.0929437730015
+Steps/minutes :  16143.3838113
+[10:31:42]  Episode :  86  steps :  238  reward :  89.9033596148 noise :  0.079363210361
+Steps/minutes :  16141.6508963
+[10:31:42]  Episode :  87  steps :  233  reward :  83.7211633551 noise :  0.397064622178
+Steps/minutes :  16141.035137
+[10:31:44]  Episode :  88  steps :  413  reward :  91.6707358854 noise :  0.085728697286
+Steps/minutes :  16138.6606734
+[10:31:45]  Episode :  89  steps :  143  reward :  88.5201258184 noise :  0.886509825367
+Steps/minutes :  16138.8051201
+[10:31:45]  Episode :  90  steps :  189  reward :  85.1351646807 noise :  0.963924046623
+Steps/minutes :  16138.5926566
+[10:31:46]  Episode :  91  steps :  228  reward :  81.4141865254 noise :  0.914523956724
+Steps/minutes :  16137.3654925
+[10:31:47]  Episode :  92  steps :  213  reward :  89.708231219 noise :  0.492448892306
+Steps/minutes :  16137.6480467
+[10:31:48]  Episode :  93  steps :  178  reward :  86.955463926 noise :  0.858879339254
+Steps/minutes :  16138.0070012
+[10:31:48]  Episode :  94  steps :  132  reward :  92.3288338575 noise :  0.0608703081725
+Steps/minutes :  16139.0180126
+[10:31:49]  Episode :  95  steps :  166  reward :  85.1448649554 noise :  0.911445969604
+Steps/minutes :  16139.2331255
+[10:31:49]  Episode :  96  steps :  149  reward :  87.3826566992 noise :  0.911322251961
+Steps/minutes :  16139.4099151
+[10:31:50]  Episode :  97  steps :  226  reward :  88.2078281813 noise :  0.656534925417
+Steps/minutes :  16138.9334875
+[10:31:51]  Episode :  98  steps :  187  reward :  89.4661027459 noise :  0.139245142673
+Steps/minutes :  16139.3040717
+[10:31:52]  Episode :  99  steps :  408  reward :  82.2746593516 noise :  0.792130301678
+Steps/minutes :  16139.4535295
+[10:31:53]  Episode :  100  steps :  185  reward :  88.5344929773 noise :  0.635863468232
+Steps/minutes :  16138.3964016
+[10:31:54]  Episode :  101  steps :  258  reward :  77.0302409956 noise :  0.750690899446
+Steps/minutes :  16138.4946615
+[10:31:55]  Episode :  102  steps :  328  reward :  89.8479823807 noise :  0.136043283188
+Steps/minutes :  16136.2143042
+[10:31:56]  Episode :  103  steps :  311  reward :  85.527312708 noise :  0.608340550745
+Steps/minutes :  16137.0273962
+[10:31:58]  Episode :  104  steps :  525  reward :  86.7895570111 noise :  0.239013986413
+Steps/minutes :  16137.7041372
+[10:31:59]  Episode :  105  steps :  310  reward :  88.8255024522 noise :  0.00532206285983
+Steps/minutes :  16138.467905
+[10:32:00]  Episode :  106  steps :  240  reward :  88.7865673401 noise :  0.190738970618
+Steps/minutes :  16136.2368555
+[10:32:01]  Episode :  107  steps :  264  reward :  81.6164640207 noise :  0.840773963138
+Steps/minutes :  16135.3736208
+[10:32:03]  Episode :  108  steps :  523  reward :  66.3240407711 noise :  0.861141188504
+Steps/minutes :  16131.3097431
+[10:32:05]  Episode :  109  steps :  385  reward :  86.1252086653 noise :  0.213075274678
+Steps/minutes :  16131.5502496
+[10:32:08]  Episode :  110  steps :  999  reward :  -29.3308170364 noise :  0.599020099573
+Steps/minutes :  16133.4991601
+[10:32:12]  Episode :  111  steps :  999  reward :  -26.0943559678 noise :  0.531728512529
+Steps/minutes :  16131.6931335
+[10:32:16]  Episode :  112  steps :  999  reward :  -18.9354127028 noise :  0.330672801048
+Steps/minutes :  16124.1422803
+[10:32:20]  Episode :  113  steps :  999  reward :  -15.3494781613 noise :  0.0072889185211
+Steps/minutes :  16117.1531028
+[10:32:24]  Episode :  114  steps :  999  reward :  -7.66075874118 noise :  0.248992486771
+Steps/minutes :  16085.8000565
+[10:32:28]  Episode :  115  steps :  999  reward :  -20.0104638087 noise :  0.718158512209
+Steps/minutes :  16089.1704661
+[10:32:31]  Episode :  116  steps :  999  reward :  -4.40923371601 noise :  0.00106353823436
+Steps/minutes :  16079.6093691
+[10:32:34]  Episode :  117  steps :  657  reward :  73.3525744975 noise :  0.868925166754
+Steps/minutes :  16075.9213884
+[10:32:36]  Episode :  118  steps :  410  reward :  80.2872682646 noise :  0.792908094856
+Steps/minutes :  16067.3430926
+[10:32:37]  Episode :  119  steps :  453  reward :  63.6725066824 noise :  0.611250950987
+Steps/minutes :  16050.4587592
+[10:32:39]  Episode :  120  steps :  444  reward :  59.8784226966 noise :  0.970594462733
+Steps/minutes :  16046.381353
+[10:32:42]  Episode :  121  steps :  699  reward :  88.8212367089 noise :  0.121209207415
+Steps/minutes :  16042.9053277
+[10:32:44]  Episode :  122  steps :  451  reward :  89.6367720752 noise :  0.282810449239
+Steps/minutes :  16032.1852532
+[10:32:44]  Episode :  123  steps :  196  reward :  88.5797278724 noise :  0.868735568092
+Steps/minutes :  16026.8686455
+[10:32:45]  Episode :  124  steps :  166  reward :  88.7361794622 noise :  0.701129570848
+Steps/minutes :  16026.8125966
+[10:32:45]  Episode :  125  steps :  79  reward :  91.8369200071 noise :  0.699271376372
+Steps/minutes :  16026.9096122
+[10:32:46]  Episode :  126  steps :  141  reward :  93.8454168109 noise :  0.438825179179
+Steps/minutes :  16026.7703235
+[10:32:46]  Episode :  127  steps :  77  reward :  91.8970693813 noise :  0.609543692878
+Steps/minutes :  16027.0266433
+[10:32:46]  Episode :  128  steps :  79  reward :  91.2938872851 noise :  0.889985066579
+Steps/minutes :  16027.2212052
+[10:32:47]  Episode :  129  steps :  172  reward :  89.6932557845 noise :  0.731395139538
+Steps/minutes :  16026.1950167
+[10:32:48]  Episode :  130  steps :  96  reward :  91.9076001747 noise :  0.0154192880672
+Steps/minutes :  16025.3786524
+[10:32:48]  Episode :  131  steps :  84  reward :  92.4274194085 noise :  0.657481231575
+Steps/minutes :  16025.5953049
+[10:32:48]  Episode :  132  steps :  74  reward :  93.2419666083 noise :  0.580667228523
+Steps/minutes :  16025.6852575
+[10:32:48]  Episode :  133  steps :  70  reward :  93.3579785248 noise :  0.0124171064678
+Steps/minutes :  16025.8709509
+[10:32:49]  Episode :  134  steps :  76  reward :  89.9151145921 noise :  0.994975538261
+Steps/minutes :  16025.9763549
+[10:32:49]  Episode :  135  steps :  77  reward :  91.3348075796 noise :  0.852174733095
+Steps/minutes :  16026.2249154
+[10:32:50]  Episode :  136  steps :  221  reward :  87.0680279609 noise :  0.94640963053
+Steps/minutes :  16027.0606242
+[10:32:50]  Episode :  137  steps :  105  reward :  90.4076769276 noise :  0.35774626324
+Steps/minutes :  16027.1357945
+[10:32:51]  Episode :  138  steps :  255  reward :  88.6347958638 noise :  0.812118740168
+Steps/minutes :  16027.4915764
+[10:32:52]  Episode :  139  steps :  149  reward :  86.4211543788 noise :  0.739204278457
+Steps/minutes :  16027.1880829
+[10:32:52]  Episode :  140  steps :  85  reward :  93.0429060713 noise :  0.0995282109567
+Steps/minutes :  16027.0142708
+[10:32:52]  Episode :  141  steps :  71  reward :  93.1983382374 noise :  0.301920323253
+Steps/minutes :  16026.7016802
+[10:32:53]  Episode :  142  steps :  69  reward :  92.0204371515 noise :  0.530600716946
+Steps/minutes :  16026.7548979
+[10:32:53]  Episode :  143  steps :  150  reward :  87.9532257787 noise :  0.813380768875
+Steps/minutes :  16026.6882623
+[10:32:53]  Episode :  144  steps :  67  reward :  91.5258974021 noise :  0.435520563364
+Steps/minutes :  16026.5944545
+[10:32:54]  Episode :  145  steps :  72  reward :  91.6873941787 noise :  0.53713101035
+Steps/minutes :  16026.5296451
+[10:32:54]  Episode :  146  steps :  70  reward :  91.3510001023 noise :  0.756488210529
+Steps/minutes :  16026.6901048
+[10:32:54]  Episode :  147  steps :  76  reward :  89.7736132212 noise :  0.902701746626
+Steps/minutes :  16026.3466257
+[10:32:54]  Episode :  148  steps :  69  reward :  91.4022349997 noise :  0.605521150303
+Steps/minutes :  16026.1987778
+[10:32:55]  Episode :  149  steps :  67  reward :  93.0075083206 noise :  0.0400767246166
+Steps/minutes :  16026.353644
+[10:32:55]  Episode :  150  steps :  68  reward :  93.7956268231 noise :  0.0159963245352
+Steps/minutes :  16025.9219566
+[10:32:55]  Episode :  151  steps :  77  reward :  89.7109632931 noise :  0.923576832782
+Steps/minutes :  16025.4210753
+[10:32:55]  Episode :  152  steps :  72  reward :  92.4471428573 noise :  0.600138658906
+Steps/minutes :  16024.7084215
+[10:32:56]  Episode :  153  steps :  69  reward :  93.5859926233 noise :  0.205798103344
+Steps/minutes :  16024.5424567
+[10:32:56]  Episode :  154  steps :  73  reward :  92.5173597228 noise :  0.595719429305
+Steps/minutes :  16023.8752134
+[10:32:56]  Episode :  155  steps :  69  reward :  89.838856986 noise :  0.847394843933
+Steps/minutes :  16023.6219568
+[10:32:57]  Episode :  156  steps :  70  reward :  93.159753961 noise :  0.577499276394
+Steps/minutes :  16023.4300772
+[10:32:57]  Episode :  157  steps :  70  reward :  91.3594662977 noise :  0.542460523972
+Steps/minutes :  16022.7956043
+[10:32:57]  Episode :  158  steps :  71  reward :  90.5213174326 noise :  0.891987270867
+Steps/minutes :  16022.4144398
+[10:32:57]  Episode :  159  steps :  70  reward :  89.6257082976 noise :  0.759498966037
+Steps/minutes :  16022.0682137
+[10:32:58]  Episode :  160  steps :  67  reward :  91.4455197385 noise :  0.0333809988578
+Steps/minutes :  16021.5293953
+[10:32:58]  Episode :  161  steps :  71  reward :  90.4181346757 noise :  0.906236510115
+Steps/minutes :  16021.6920454
+[10:32:58]  Episode :  162  steps :  68  reward :  92.548178308 noise :  0.0608796181085
+Steps/minutes :  16021.509133
+[10:32:58]  Episode :  163  steps :  68  reward :  91.972764796 noise :  0.680231431777
+Steps/minutes :  16021.4595987
+[10:32:59]  Episode :  164  steps :  70  reward :  91.6178738635 noise :  0.698211477386
+Steps/minutes :  16021.7415153
+[10:32:59]  Episode :  165  steps :  75  reward :  91.8701587818 noise :  0.971769660832
+Steps/minutes :  16020.8598295
+[10:32:59]  Episode :  166  steps :  68  reward :  89.9291123525 noise :  0.592672433819
+Steps/minutes :  16019.7839467
+[10:32:59]  Episode :  167  steps :  68  reward :  90.0653217561 noise :  0.445643035034
+Steps/minutes :  16019.9771079
+[10:33:00]  Episode :  168  steps :  68  reward :  91.2770577164 noise :  0.6705609992
+Steps/minutes :  16018.7106678
+[10:33:00]  Episode :  169  steps :  68  reward :  92.9607030699 noise :  0.143518133832
+Steps/minutes :  16018.2202614
+[10:33:00]  Episode :  170  steps :  67  reward :  91.0430817521 noise :  0.617978603587
+Steps/minutes :  16018.3215275
+[10:33:01]  Episode :  171  steps :  69  reward :  90.5919273971 noise :  0.62912797555
+Steps/minutes :  16018.093736
+[10:33:01]  Episode :  172  steps :  72  reward :  92.8594181692 noise :  0.42752204522
+Steps/minutes :  16018.0239394
+[10:33:01]  Episode :  173  steps :  68  reward :  92.9285260811 noise :  0.188825108125
+Steps/minutes :  16017.7623937
+[10:33:01]  Episode :  174  steps :  67  reward :  92.166088753 noise :  0.0638435777185
+Steps/minutes :  16017.9103648
+[10:33:02]  Episode :  175  steps :  69  reward :  91.9510201549 noise :  0.553242030586
+Steps/minutes :  16018.0886976
+[10:33:02]  Episode :  176  steps :  68  reward :  91.3600828954 noise :  0.36606861053
+Steps/minutes :  16018.2759786
+[10:33:02]  Episode :  177  steps :  69  reward :  91.83865248 noise :  0.565282550962
+Steps/minutes :  16018.3534379
+[10:33:02]  Episode :  178  steps :  67  reward :  92.0253720643 noise :  0.144817409239
+Steps/minutes :  16018.4562366
+[10:33:03]  Episode :  179  steps :  70  reward :  90.1366774407 noise :  0.753193347796
+Steps/minutes :  16018.3506068
+[10:33:03]  Episode :  180  steps :  68  reward :  92.3295931352 noise :  0.00608167730987
+Steps/minutes :  16018.4976647
+[10:33:03]  Episode :  181  steps :  73  reward :  92.6448832901 noise :  0.61179261234
+Steps/minutes :  16016.6832645
+[10:33:03]  Episode :  182  steps :  70  reward :  89.351152251 noise :  0.882886309592
+Steps/minutes :  16015.2720701
+[10:33:04]  Episode :  183  steps :  68  reward :  92.2386435103 noise :  0.18520687665
+Steps/minutes :  16014.8194509
+[10:33:04]  Episode :  184  steps :  70  reward :  92.5649438239 noise :  0.498408328896
+Steps/minutes :  16014.9282207
+[10:33:04]  Episode :  185  steps :  67  reward :  92.2283409102 noise :  0.176472783871
+Steps/minutes :  16014.202947
+[10:33:05]  Episode :  186  steps :  66  reward :  91.6559278421 noise :  0.0087969225259
+Steps/minutes :  16010.5777781
+[10:33:05]  Episode :  187  steps :  66  reward :  91.7163047674 noise :  0.164409405522
+Steps/minutes :  16010.2748863
+[10:33:05]  Episode :  188  steps :  70  reward :  91.3393679617 noise :  0.714039837604
+Steps/minutes :  16010.3844553
+[10:33:05]  Episode :  189  steps :  67  reward :  91.5675162442 noise :  0.331799871362
+Steps/minutes :  16009.3032395
+[10:33:06]  Episode :  190  steps :  68  reward :  92.3134106278 noise :  0.224023236209
+Steps/minutes :  16004.0530581
+[10:33:06]  Episode :  191  steps :  70  reward :  91.2178930944 noise :  0.737388584239
+Steps/minutes :  15999.9932813
+[10:33:06]  Episode :  192  steps :  70  reward :  89.8935753146 noise :  0.912959697839
+Steps/minutes :  16000.0878273
+[10:33:06]  Episode :  193  steps :  68  reward :  92.3164812666 noise :  0.384222175755
+Steps/minutes :  15998.4597965
+[10:33:07]  Episode :  194  steps :  67  reward :  91.8391191979 noise :  0.431793385844
+Steps/minutes :  15994.5805124
+[10:33:07]  Episode :  195  steps :  66  reward :  92.468415373 noise :  0.0150012987344
+Steps/minutes :  15993.8218877
+[10:33:07]  Episode :  196  steps :  66  reward :  92.2960812895 noise :  0.241197463839
+Steps/minutes :  15993.5317426
+[10:33:08]  Episode :  197  steps :  70  reward :  90.8015098988 noise :  0.732878468609
+Steps/minutes :  15993.7532516
+[10:33:08]  Episode :  198  steps :  67  reward :  90.895984095 noise :  0.54324195247
+Steps/minutes :  15994.0552521
+[10:33:08]  Episode :  199  steps :  68  reward :  92.0844921248 noise :  0.47361257217
+Steps/minutes :  15994.2204356
+[10:33:08]  Episode :  200  steps :  68  reward :  91.0704182101 noise :  0.652659154779
+Steps/minutes :  15994.3228918
+[10:33:09]  Episode :  201  steps :  72  reward :  92.5245124961 noise :  0.559343559615
+Steps/minutes :  15994.3773027
+[10:33:09]  Episode :  202  steps :  68  reward :  90.9920789379 noise :  0.596838109544
+Steps/minutes :  15994.5106334
+[10:33:09]  Episode :  203  steps :  67  reward :  92.5402599108 noise :  0.0743776915222
+Steps/minutes :  15994.5320279
+[10:33:09]  Episode :  204  steps :  70  reward :  92.0865902664 noise :  0.395021274133
+Steps/minutes :  15994.6433442
+[10:33:10]  Episode :  205  steps :  67  reward :  92.71905416 noise :  0.0327824756186
+Steps/minutes :  15994.7378167
+[10:33:10]  Episode :  206  steps :  67  reward :  92.1724776526 noise :  0.327603671557
+Steps/minutes :  15994.7927036
+[10:33:10]  Episode :  207  steps :  68  reward :  92.2898945059 noise :  0.106132327215
+Steps/minutes :  15994.768462
+[10:33:10]  Episode :  208  steps :  68  reward :  89.2499889268 noise :  0.97398669011
+Steps/minutes :  15994.775468
+[10:33:11]  Episode :  209  steps :  69  reward :  92.0882426466 noise :  0.715003757758
+Steps/minutes :  15994.9733114
+[10:33:11]  Episode :  210  steps :  67  reward :  90.9843338387 noise :  0.50776081004
+Steps/minutes :  15995.0612632
+[10:33:11]  Episode :  211  steps :  72  reward :  90.9809891947 noise :  0.910830686385
+Steps/minutes :  15995.0883543
+[10:33:11]  Episode :  212  steps :  69  reward :  90.981655037 noise :  0.832285621732
+Steps/minutes :  15995.1530025
+[10:33:12]  Episode :  213  steps :  68  reward :  92.0470120778 noise :  0.283055278294
+Steps/minutes :  15994.9412984
+[10:33:12]  Episode :  214  steps :  70  reward :  89.4503882265 noise :  0.824051839459
+Steps/minutes :  15995.0883419
+[10:33:12]  Episode :  215  steps :  67  reward :  91.7766159527 noise :  0.434702206526
+Steps/minutes :  15994.9845924
+[10:33:12]  Episode :  216  steps :  70  reward :  91.8201670046 noise :  0.518268668574
+Steps/minutes :  15994.9772926
+[10:33:13]  Episode :  217  steps :  73  reward :  90.9488430231 noise :  0.933343480979
+Steps/minutes :  15995.1687611
+[10:33:13]  Episode :  218  steps :  68  reward :  90.8390546807 noise :  0.336914818666
+Steps/minutes :  15995.2600089
+[10:33:13]  Episode :  219  steps :  68  reward :  92.2617851202 noise :  0.238484522981
+Steps/minutes :  15995.1516988
+[10:33:13]  Episode :  220  steps :  71  reward :  92.1985843812 noise :  0.54877381282
+Steps/minutes :  15995.1646579
+[10:33:14]  Episode :  221  steps :  67  reward :  90.727497376 noise :  0.499921003723
+Steps/minutes :  15995.3123189
+[10:33:14]  Episode :  222  steps :  73  reward :  90.0153484796 noise :  0.865167233262
+Steps/minutes :  15995.3645222
+[10:33:14]  Episode :  223  steps :  67  reward :  92.0887730585 noise :  0.305535178107
+Steps/minutes :  15995.3031286
+[10:33:15]  Episode :  224  steps :  71  reward :  90.9184014632 noise :  0.687088142231
+Steps/minutes :  15995.2993943
+[10:33:15]  Episode :  225  steps :  68  reward :  91.6355580342 noise :  0.556934988049
+Steps/minutes :  15995.490812
+[10:33:15]  Episode :  226  steps :  67  reward :  92.4892689527 noise :  0.166987427865
+Steps/minutes :  15995.496988
+[10:33:15]  Episode :  227  steps :  69  reward :  92.0417628283 noise :  0.768809084095
+Steps/minutes :  15995.4561868
+[10:33:16]  Episode :  228  steps :  66  reward :  92.0590813857 noise :  0.0453599720166
+Steps/minutes :  15995.5539411
+[10:33:16]  Episode :  229  steps :  68  reward :  91.728033201 noise :  0.36934236452
+Steps/minutes :  15995.7567387
+[10:33:16]  Episode :  230  steps :  69  reward :  91.678723696 noise :  0.45384664933
+Steps/minutes :  15995.6097715
+[10:33:16]  Episode :  231  steps :  69  reward :  89.6274465653 noise :  0.918483937361
+Steps/minutes :  15995.7616519
+[10:33:17]  Episode :  232  steps :  67  reward :  91.7719275529 noise :  0.456569118766
+Steps/minutes :  15995.854305
+[10:33:17]  Episode :  233  steps :  67  reward :  91.937017846 noise :  0.189234906995
+Steps/minutes :  15995.992505
+[10:33:17]  Episode :  234  steps :  68  reward :  92.6106396501 noise :  0.428895806431
+Steps/minutes :  15996.058776
+[10:33:17]  Episode :  235  steps :  67  reward :  92.5998552133 noise :  0.0628891390034
+Steps/minutes :  15996.0573964
+[10:33:18]  Episode :  236  steps :  71  reward :  92.2657759423 noise :  0.848483348074
+Steps/minutes :  15996.0079114
+[10:33:18]  Episode :  237  steps :  69  reward :  92.8535229535 noise :  0.13773270095
+Steps/minutes :  15996.0617018
+[10:33:18]  Episode :  238  steps :  68  reward :  92.0844388599 noise :  0.071883667041
+Steps/minutes :  15996.0325165
+[10:33:18]  Episode :  239  steps :  67  reward :  90.4815562085 noise :  0.535198374524
+Steps/minutes :  15996.1904309
+[10:33:19]  Episode :  240  steps :  70  reward :  90.2626281121 noise :  0.795619983094
+Steps/minutes :  15996.2541619
+[10:33:19]  Episode :  241  steps :  74  reward :  91.7411500677 noise :  0.818781852057
+Steps/minutes :  15996.1917868
+[10:33:19]  Episode :  242  steps :  68  reward :  92.8941975497 noise :  0.318211599814
+Steps/minutes :  15995.7853004
+[10:33:19]  Episode :  243  steps :  69  reward :  92.7736766639 noise :  0.2667258464
+Steps/minutes :  15995.7026681
+[10:33:20]  Episode :  244  steps :  68  reward :  93.6567354616 noise :  0.138539699059
+Steps/minutes :  15995.7854194
+[10:33:20]  Episode :  245  steps :  70  reward :  92.386717481 noise :  0.140702907909
+Steps/minutes :  15995.8141056
+[10:33:20]  Episode :  246  steps :  69  reward :  91.0070524333 noise :  0.598093223424
+Steps/minutes :  15995.8162132
+[10:33:20]  Episode :  247  steps :  70  reward :  86.897350226 noise :  0.865855856282
+Steps/minutes :  15995.7412454
+[10:33:21]  Episode :  248  steps :  73  reward :  91.3893125585 noise :  0.891138874169
+Steps/minutes :  15995.5495718
+[10:33:21]  Episode :  249  steps :  72  reward :  90.9004415008 noise :  0.903287284526
+Steps/minutes :  15995.5469362
+[10:33:21]  Episode :  250  steps :  67  reward :  92.7830320303 noise :  0.281532221868
+Steps/minutes :  15995.6174155
+[10:33:22]  Episode :  251  steps :  68  reward :  91.1453060301 noise :  0.637716063995
+Steps/minutes :  15995.591605
+[10:33:22]  Episode :  252  steps :  70  reward :  93.6201915277 noise :  0.368573067428
+Steps/minutes :  15995.5596867
+[10:33:22]  Episode :  253  steps :  70  reward :  91.1799009102 noise :  0.851686016475
+Steps/minutes :  15995.6934945
+[10:33:22]  Episode :  254  steps :  73  reward :  90.7612896661 noise :  0.252493976074
+Steps/minutes :  15995.7846528
+[10:33:23]  Episode :  255  steps :  68  reward :  92.1645412771 noise :  0.37824987043
+Steps/minutes :  15995.8517538
+[10:33:23]  Episode :  256  steps :  68  reward :  93.0035895802 noise :  0.369306930142
+Steps/minutes :  15995.8812814
+[10:33:23]  Episode :  257  steps :  71  reward :  92.4497966162 noise :  0.460762700224
+Steps/minutes :  15995.9720571
+[10:33:23]  Episode :  258  steps :  71  reward :  93.106108752 noise :  0.120220875557
+Steps/minutes :  15995.9063068
+[10:33:24]  Episode :  259  steps :  71  reward :  92.5674038555 noise :  0.0437279300233
+Steps/minutes :  15995.9395004
+[10:33:24]  Episode :  260  steps :  72  reward :  91.9748665015 noise :  0.34243380255
+Steps/minutes :  15995.9740757
+[10:33:24]  Episode :  261  steps :  70  reward :  92.8107977069 noise :  0.462038451193
+Steps/minutes :  15995.906365
+[10:33:24]  Episode :  262  steps :  69  reward :  92.4892781829 noise :  0.0608747173202
+Steps/minutes :  15995.8792836
+[10:33:25]  Episode :  263  steps :  72  reward :  89.8619455791 noise :  0.818964069348
+Steps/minutes :  15995.7508268
+[10:33:25]  Episode :  264  steps :  70  reward :  92.1462167226 noise :  0.446505142375
+Steps/minutes :  15995.516003
+[10:33:25]  Episode :  265  steps :  77  reward :  91.8116139256 noise :  0.916557693303
+Steps/minutes :  15992.0770451
+[10:33:26]  Episode :  266  steps :  73  reward :  87.8060654667 noise :  0.879847727861
+Steps/minutes :  15991.889045
+[10:33:26]  Episode :  267  steps :  74  reward :  90.6986100859 noise :  0.437633376745
+Steps/minutes :  15991.8661443
+[10:33:26]  Episode :  268  steps :  73  reward :  90.9907008396 noise :  0.356816869371
+Steps/minutes :  15991.7929087
+[10:33:26]  Episode :  269  steps :  73  reward :  90.9774932977 noise :  0.219951678211
+Steps/minutes :  15991.7723172
+[10:33:27]  Episode :  270  steps :  71  reward :  91.1074497791 noise :  0.33547876568
+Steps/minutes :  15991.7563899
+[10:33:27]  Episode :  271  steps :  72  reward :  92.2957701231 noise :  0.717341172147
+Steps/minutes :  15991.8874499
+[10:33:27]  Episode :  272  steps :  71  reward :  90.6634604567 noise :  0.385795043289
+Steps/minutes :  15991.9731712
+[10:33:27]  Episode :  273  steps :  71  reward :  90.864859402 noise :  0.0572020787921
+Steps/minutes :  15992.0216644
+[10:33:28]  Episode :  274  steps :  75  reward :  90.4571640789 noise :  0.726570885018
+Steps/minutes :  15992.1018269
+[10:33:28]  Episode :  275  steps :  73  reward :  91.2039626717 noise :  0.624326000127
+Steps/minutes :  15992.1979004
+[10:33:28]  Episode :  276  steps :  74  reward :  90.4847569115 noise :  0.631870385932
+Steps/minutes :  15992.1169398
+[10:33:29]  Episode :  277  steps :  75  reward :  91.0048660006 noise :  0.760958028443
+Steps/minutes :  15992.0080416
+[10:33:29]  Episode :  278  steps :  74  reward :  91.1459496105 noise :  0.225632511611
+Steps/minutes :  15991.9614823
+[10:33:29]  Episode :  279  steps :  73  reward :  91.3061528444 noise :  0.239556259069
+Steps/minutes :  15991.8350673
+[10:33:29]  Episode :  280  steps :  75  reward :  90.1310944307 noise :  0.779107207544
+Steps/minutes :  15991.7351933
+[10:33:30]  Episode :  281  steps :  73  reward :  92.0046303622 noise :  0.231692964955
+Steps/minutes :  15991.5404465
+[10:33:30]  Episode :  282  steps :  75  reward :  89.3238437323 noise :  0.908058097616
+Steps/minutes :  15991.4955071
+[10:33:30]  Episode :  283  steps :  75  reward :  89.6112225967 noise :  0.741528268189
+Steps/minutes :  15991.3567153
+[10:33:31]  Episode :  284  steps :  76  reward :  91.0597659886 noise :  0.500690053427
+Steps/minutes :  15991.3505986
+[10:33:31]  Episode :  285  steps :  72  reward :  91.4789379836 noise :  0.0151073816438
+Steps/minutes :  15991.3802379
+[10:33:31]  Episode :  286  steps :  71  reward :  90.2474772428 noise :  0.884612679082
+Steps/minutes :  15991.3667331
+[10:33:31]  Episode :  287  steps :  73  reward :  91.2829696882 noise :  0.373931288674
+Steps/minutes :  15991.3496209
+[10:33:32]  Episode :  288  steps :  74  reward :  91.0925706838 noise :  0.22532971196
+Steps/minutes :  15991.2632577
+[10:33:32]  Episode :  289  steps :  72  reward :  91.3574921881 noise :  0.0316731168962
+Steps/minutes :  15991.3169831
+[10:33:32]  Episode :  290  steps :  74  reward :  91.693354514 noise :  0.127333384537
+Steps/minutes :  15991.2160422
+[10:33:32]  Episode :  291  steps :  73  reward :  90.167633593 noise :  0.568559790875
+Steps/minutes :  15991.1798637
+[10:33:33]  Episode :  292  steps :  74  reward :  90.8971996676 noise :  0.0315171557319
+Steps/minutes :  15991.2432058
+[10:33:33]  Episode :  293  steps :  73  reward :  91.5999307128 noise :  0.0710641576203
+Steps/minutes :  15991.3406812
+[10:33:33]  Episode :  294  steps :  75  reward :  91.342960376 noise :  0.106426679347
+Steps/minutes :  15991.2766783
+[10:33:34]  Episode :  295  steps :  73  reward :  90.2930919659 noise :  0.296700710582
+Steps/minutes :  15991.279231
+[10:33:34]  Episode :  296  steps :  76  reward :  89.5872529771 noise :  0.827182582863
+Steps/minutes :  15991.1724432
+[10:33:34]  Episode :  297  steps :  76  reward :  90.6732149285 noise :  0.976487124256
+Steps/minutes :  15991.2105202
+[10:33:34]  Episode :  298  steps :  72  reward :  90.0565980921 noise :  0.773233540839
+Steps/minutes :  15991.1311454
+[10:33:35]  Episode :  299  steps :  72  reward :  91.5279084385 noise :  0.158692905824
+Steps/minutes :  15991.2048988
+[10:33:35]  Episode :  300  steps :  73  reward :  90.7815727962 noise :  0.439036175756
+Steps/minutes :  15991.0633711
+[10:33:35]  Episode :  301  steps :  71  reward :  92.1186749957 noise :  0.368830197559
+Steps/minutes :  15990.7850611
+[10:33:35]  Episode :  302  steps :  72  reward :  91.3897448236 noise :  0.0505502274047
+Steps/minutes :  15990.7050109
+[10:33:36]  Episode :  303  steps :  72  reward :  91.6915924214 noise :  0.686790236955
+Steps/minutes :  15990.7975949
+[10:33:36]  Episode :  304  steps :  71  reward :  91.3068619203 noise :  0.0941631179241
+Steps/minutes :  15990.732971
+[10:33:36]  Episode :  305  steps :  72  reward :  91.4006982301 noise :  0.055021497564
+Steps/minutes :  15990.7331408
+[10:33:37]  Episode :  306  steps :  72  reward :  86.2351587483 noise :  0.909364041216
+Steps/minutes :  15990.6682401
+[10:33:37]  Episode :  307  steps :  72  reward :  91.405203178 noise :  0.371929758856
+Steps/minutes :  15990.6178753
+[10:33:37]  Episode :  308  steps :  76  reward :  90.0747177677 noise :  0.947008548276
+Steps/minutes :  15990.5761134
+[10:33:37]  Episode :  309  steps :  71  reward :  91.5426186992 noise :  0.291694869537
+Steps/minutes :  15990.4536746
+[10:33:38]  Episode :  310  steps :  74  reward :  90.7339395548 noise :  0.688745658899
+Steps/minutes :  15990.4359243
+[10:33:38]  Episode :  311  steps :  73  reward :  88.3822324107 noise :  0.977936917607
+Steps/minutes :  15990.3959654
+[10:33:38]  Episode :  312  steps :  71  reward :  92.5006054942 noise :  0.120726937471
+Steps/minutes :  15990.3274905
+[10:33:39]  Episode :  313  steps :  72  reward :  91.5960147073 noise :  0.306348997684
+Steps/minutes :  15990.1355923
+[10:33:39]  Episode :  314  steps :  71  reward :  90.9539195386 noise :  0.306406603031
+Steps/minutes :  15990.2057505
+[10:33:39]  Episode :  315  steps :  71  reward :  91.4080955509 noise :  0.590528541328
+Steps/minutes :  15986.3246395
+[10:33:39]  Episode :  316  steps :  74  reward :  89.1647570605 noise :  0.858193979131
+Steps/minutes :  15985.8586991
+[10:33:40]  Episode :  317  steps :  73  reward :  91.6514182438 noise :  0.50739056334
+Steps/minutes :  15985.455496
+[10:33:40]  Episode :  318  steps :  74  reward :  90.4528857716 noise :  0.914333737517
+Steps/minutes :  15984.9920616
+[10:33:40]  Episode :  319  steps :  73  reward :  92.5433822286 noise :  0.529876782453
+Steps/minutes :  15984.8901149
+[10:33:40]  Episode :  320  steps :  72  reward :  91.7006414115 noise :  0.385921949749
+Steps/minutes :  15984.782676
+[10:33:41]  Episode :  321  steps :  72  reward :  91.7342528583 noise :  0.250408640627
+Steps/minutes :  15984.723567
+[10:33:41]  Episode :  322  steps :  73  reward :  91.3493837068 noise :  0.744551061012
+Steps/minutes :  15984.6486718
+[10:33:41]  Episode :  323  steps :  71  reward :  91.0953352016 noise :  0.458908524856
+Steps/minutes :  15984.6068316
+[10:33:42]  Episode :  324  steps :  75  reward :  90.8576100012 noise :  0.697733300685
+Steps/minutes :  15984.5033059
+[10:33:42]  Episode :  325  steps :  71  reward :  91.1565334503 noise :  0.674547888519
+Steps/minutes :  15984.4186813
+[10:33:42]  Episode :  326  steps :  71  reward :  92.4543393056 noise :  0.250760628691
+Steps/minutes :  15984.4109881
+[10:33:42]  Episode :  327  steps :  73  reward :  92.3441497677 noise :  0.360899493723
+Steps/minutes :  15984.4458345
+[10:33:43]  Episode :  328  steps :  73  reward :  91.7486548522 noise :  0.365327958537
+Steps/minutes :  15984.3490465
+[10:33:43]  Episode :  329  steps :  70  reward :  91.2337703951 noise :  0.600076668171
+Steps/minutes :  15984.3664787
+[10:33:43]  Episode :  330  steps :  73  reward :  91.66236137 noise :  0.660540973263
+Steps/minutes :  15984.3285598
+[10:33:43]  Episode :  331  steps :  72  reward :  92.0669543778 noise :  0.407908306174
+Steps/minutes :  15984.2772273
+[10:33:44]  Episode :  332  steps :  71  reward :  91.6757650995 noise :  0.396156240585
+Steps/minutes :  15984.2519965
+[10:33:44]  Episode :  333  steps :  75  reward :  91.3310766095 noise :  0.909791203396
+Steps/minutes :  15984.1900158
+[10:33:44]  Episode :  334  steps :  70  reward :  92.2120013859 noise :  0.12539309305
+Steps/minutes :  15984.0770433
+[10:33:45]  Episode :  335  steps :  69  reward :  92.1445154523 noise :  0.106606060738
+Steps/minutes :  15984.0538193
+[10:33:45]  Episode :  336  steps :  70  reward :  91.5380591572 noise :  0.339920942027
+Steps/minutes :  15984.1171665
+[10:33:45]  Episode :  337  steps :  69  reward :  91.814889173 noise :  0.316669501542
+Steps/minutes :  15984.0730762
+[10:33:45]  Episode :  338  steps :  72  reward :  92.583199189 noise :  0.431192454377
+Steps/minutes :  15983.7922868
+[10:33:46]  Episode :  339  steps :  72  reward :  92.0736099323 noise :  0.265295636055
+Steps/minutes :  15983.8065966
+[10:33:46]  Episode :  340  steps :  74  reward :  92.1710249909 noise :  0.911054911758
+Steps/minutes :  15983.8799348
+[10:33:46]  Episode :  341  steps :  71  reward :  91.5953324346 noise :  0.424684420396
+Steps/minutes :  15983.8343748
+[10:33:46]  Episode :  342  steps :  71  reward :  91.0180555269 noise :  0.743823333423
+Steps/minutes :  15983.7302144
+[10:33:47]  Episode :  343  steps :  72  reward :  89.8317293887 noise :  0.834166098714
+Steps/minutes :  15983.6924672
+[10:33:47]  Episode :  344  steps :  72  reward :  91.6030488233 noise :  0.754495631062
+Steps/minutes :  15983.6835601
+[10:33:47]  Episode :  345  steps :  70  reward :  91.9455312011 noise :  0.481370508786
+Steps/minutes :  15983.5285877
+[10:33:48]  Episode :  346  steps :  70  reward :  91.5021686882 noise :  0.378850732723
+Steps/minutes :  15983.3358793
+[10:33:48]  Episode :  347  steps :  70  reward :  91.162431919 noise :  0.457355867524
+Steps/minutes :  15983.3882423
+[10:33:48]  Episode :  348  steps :  69  reward :  91.6536134136 noise :  0.150364032007
+Steps/minutes :  15983.3258495
+[10:33:48]  Episode :  349  steps :  72  reward :  92.3862262664 noise :  0.604412838691
+Steps/minutes :  15983.3409009
+[10:33:49]  Episode :  350  steps :  72  reward :  91.3410376105 noise :  0.798457794543
+Steps/minutes :  15983.0049857
+[10:33:49]  Episode :  351  steps :  69  reward :  91.8794829486 noise :  0.300657991526
+Steps/minutes :  15983.0529192
+[10:33:49]  Episode :  352  steps :  70  reward :  91.7170716066 noise :  0.397845970271
+Steps/minutes :  15982.951467
+[10:33:49]  Episode :  353  steps :  69  reward :  91.8518090052 noise :  0.079290483708
+Steps/minutes :  15982.8943091
+[10:33:50]  Episode :  354  steps :  70  reward :  91.6418372606 noise :  0.326712041312
+Steps/minutes :  15982.7437189
+[10:33:50]  Episode :  355  steps :  71  reward :  92.6444823791 noise :  0.411480905041
+Steps/minutes :  15982.5864343
+[10:33:50]  Episode :  356  steps :  69  reward :  92.9020967801 noise :  0.165859688726
+Steps/minutes :  15982.326474
+[10:33:50]  Episode :  357  steps :  70  reward :  91.9311376227 noise :  0.701761290277
+Steps/minutes :  15982.2114214
+[10:33:51]  Episode :  358  steps :  69  reward :  91.6129346499 noise :  0.0112575320715
+Steps/minutes :  15982.1645289
+[10:33:51]  Episode :  359  steps :  69  reward :  91.6949967907 noise :  0.487002948893
+Steps/minutes :  15981.9639104
+[10:33:51]  Episode :  360  steps :  69  reward :  91.3141062812 noise :  0.349295701523
+Steps/minutes :  15981.7173316
+[10:33:51]  Episode :  361  steps :  69  reward :  91.9476604844 noise :  0.273155867193
+Steps/minutes :  15981.5887975
+[10:33:52]  Episode :  362  steps :  68  reward :  92.0909398311 noise :  0.344477229347
+Steps/minutes :  15981.5571873
+[10:33:52]  Episode :  363  steps :  70  reward :  91.6905814532 noise :  0.688269864605
+Steps/minutes :  15981.4087007
+[10:33:52]  Episode :  364  steps :  70  reward :  90.4403252397 noise :  0.795625481982
+Steps/minutes :  15981.2622751
+[10:33:53]  Episode :  365  steps :  68  reward :  91.2556383819 noise :  0.488244258056
+Steps/minutes :  15981.0732047
+[10:33:53]  Episode :  366  steps :  68  reward :  91.2052653218 noise :  0.127839658226
+Steps/minutes :  15980.9512592
+[10:33:53]  Episode :  367  steps :  69  reward :  91.5335756771 noise :  0.187432863907
+Steps/minutes :  15980.9502473
+[10:33:53]  Episode :  368  steps :  71  reward :  90.6069643314 noise :  0.711650526274
+Steps/minutes :  15980.8295805
+[10:33:54]  Episode :  369  steps :  69  reward :  91.0957303843 noise :  0.356797495256
+Steps/minutes :  15980.6828608
+[10:33:54]  Episode :  370  steps :  71  reward :  91.3511329057 noise :  0.686250135625
+Steps/minutes :  15980.4800257
+[10:33:54]  Episode :  371  steps :  72  reward :  89.4692048522 noise :  0.974523248627
+Steps/minutes :  15980.3025011
+[10:33:54]  Episode :  372  steps :  71  reward :  91.2608416626 noise :  0.722458170203
+Steps/minutes :  15980.1607935
+[10:33:55]  Episode :  373  steps :  68  reward :  90.0980887764 noise :  0.453925366897
+Steps/minutes :  15980.1620658
+[10:33:55]  Episode :  374  steps :  68  reward :  92.2609738979 noise :  0.192018059708
+Steps/minutes :  15980.0844129
+[10:33:55]  Episode :  375  steps :  68  reward :  91.737509846 noise :  0.135211493196
+Steps/minutes :  15979.7866144
+[10:33:55]  Episode :  376  steps :  68  reward :  90.8134524218 noise :  0.610004853733
+Steps/minutes :  15979.5486394
+[10:33:56]  Episode :  377  steps :  68  reward :  91.4802270935 noise :  0.53781310362
+Steps/minutes :  15979.5209231
+[10:33:56]  Episode :  378  steps :  68  reward :  91.5607160099 noise :  0.090862905565
+Steps/minutes :  15979.370029
+[10:33:56]  Episode :  379  steps :  70  reward :  92.7983186061 noise :  0.475572439824
+Steps/minutes :  15979.1332591
+[10:33:56]  Episode :  380  steps :  68  reward :  91.7327722161 noise :  0.186192862069
+Steps/minutes :  15978.96023
+[10:33:57]  Episode :  381  steps :  69  reward :  91.4256144675 noise :  0.335263387171
+Steps/minutes :  15978.8114711
+[10:33:57]  Episode :  382  steps :  69  reward :  89.8301075458 noise :  0.876553847803
+Steps/minutes :  15978.7277549
+[10:33:57]  Episode :  383  steps :  68  reward :  91.1948046503 noise :  0.444368775442
+Steps/minutes :  15978.5525041
+[10:33:58]  Episode :  384  steps :  69  reward :  89.9131854015 noise :  0.774816614948
+Steps/minutes :  15978.0734725
+[10:33:58]  Episode :  385  steps :  68  reward :  91.4796476686 noise :  0.332841881015
+Steps/minutes :  15977.9693988
+[10:33:58]  Episode :  386  steps :  67  reward :  92.0893795335 noise :  0.122705734742
+Steps/minutes :  15977.9614188
+[10:33:58]  Episode :  387  steps :  68  reward :  91.7984338926 noise :  0.211763449163
+Steps/minutes :  15977.8858274
+[10:33:59]  Episode :  388  steps :  68  reward :  91.9417370003 noise :  0.186152074076
+Steps/minutes :  15977.9365597
+[10:33:59]  Episode :  389  steps :  71  reward :  89.6662167643 noise :  0.886875412082
+Steps/minutes :  15977.8858806
+[10:33:59]  Episode :  390  steps :  69  reward :  89.0088814979 noise :  0.908918966028
+Steps/minutes :  15977.7733149
+[10:33:59]  Episode :  391  steps :  67  reward :  91.6148888907 noise :  0.112830026665
+Steps/minutes :  15977.6122826
+[10:34:00]  Episode :  392  steps :  70  reward :  91.8069723688 noise :  0.523432226037
+Steps/minutes :  15976.9950019
+[10:34:00]  Episode :  393  steps :  71  reward :  90.6996190019 noise :  0.879965149156
+Steps/minutes :  15976.913785
+[10:34:00]  Episode :  394  steps :  71  reward :  89.7303097159 noise :  0.910497982431
+Steps/minutes :  15976.6485422
+[10:34:00]  Episode :  395  steps :  68  reward :  91.1894104905 noise :  0.435975811666
+Steps/minutes :  15976.4403766
+[10:34:01]  Episode :  396  steps :  68  reward :  91.827436545 noise :  0.478837232995
+Steps/minutes :  15976.3545312
+[10:34:01]  Episode :  397  steps :  68  reward :  91.1601281839 noise :  0.275911146712
+Steps/minutes :  15976.3341997
+[10:34:01]  Episode :  398  steps :  67  reward :  91.7963187582 noise :  0.272893390787
+Steps/minutes :  15976.2283298
+[10:34:01]  Episode :  399  steps :  67  reward :  91.9299748907 noise :  0.190859632484
+Steps/minutes :  15976.0822534
+[10:34:02]  Episode :  400  steps :  72  reward :  90.9892966591 noise :  0.886778875738
+Steps/minutes :  15975.9502562
+[10:34:02]  Episode :  401  steps :  70  reward :  90.6312463354 noise :  0.606261420171
+Steps/minutes :  15975.900269
+[10:34:02]  Episode :  402  steps :  69  reward :  90.7748948087 noise :  0.7268083226
+Steps/minutes :  15975.7312974
+[10:34:02]  Episode :  403  steps :  69  reward :  91.8891007571 noise :  0.716106193874
+Steps/minutes :  15975.6098022
+[10:34:03]  Episode :  404  steps :  67  reward :  91.5363758917 noise :  0.0202586687773
+Steps/minutes :  15975.4662099
+[10:34:03]  Episode :  405  steps :  69  reward :  91.6379000495 noise :  0.49800499703
+Steps/minutes :  15975.3808264
+[10:34:03]  Episode :  406  steps :  67  reward :  91.8990850503 noise :  0.0462032291935
+Steps/minutes :  15975.1655211
+[10:34:04]  Episode :  407  steps :  69  reward :  90.4064768439 noise :  0.797983410436
+Steps/minutes :  15974.9219005
+[10:34:04]  Episode :  408  steps :  69  reward :  91.1177018175 noise :  0.589697333663
+Steps/minutes :  15974.853329
+[10:34:04]  Episode :  409  steps :  67  reward :  91.4262385452 noise :  0.213151777509
+Steps/minutes :  15974.7877386
+[10:34:04]  Episode :  410  steps :  72  reward :  91.0018502516 noise :  0.882537865306
+Steps/minutes :  15974.7083273
+[10:34:05]  Episode :  411  steps :  68  reward :  92.7761724347 noise :  0.428871368062
+Steps/minutes :  15974.5487912
+[10:34:05]  Episode :  412  steps :  67  reward :  91.5288445745 noise :  0.0562853559465
+Steps/minutes :  15974.4029048
+[10:34:05]  Episode :  413  steps :  70  reward :  90.1845418894 noise :  0.955403200276
+Steps/minutes :  15974.1949282
+[10:34:05]  Episode :  414  steps :  67  reward :  91.7218579123 noise :  0.0858831543406
+Steps/minutes :  15974.1468398
+[10:34:06]  Episode :  415  steps :  67  reward :  91.5594708692 noise :  0.210375643194
+Steps/minutes :  15974.0084833
+[10:34:06]  Episode :  416  steps :  67  reward :  91.6616897295 noise :  0.180108939429
+Steps/minutes :  15973.1275309
+[10:34:06]  Episode :  417  steps :  67  reward :  92.176736344 noise :  0.236068164624
+Steps/minutes :  15973.0207357
+[10:34:06]  Episode :  418  steps :  68  reward :  90.6159566925 noise :  0.444404831611
+Steps/minutes :  15972.9584838
+[10:34:07]  Episode :  419  steps :  70  reward :  91.4110766585 noise :  0.599556552989
+Steps/minutes :  15972.5510301
+[10:34:07]  Episode :  420  steps :  69  reward :  89.2788978421 noise :  0.805611193877
+Steps/minutes :  15972.472375
+[10:34:07]  Episode :  421  steps :  67  reward :  91.6134662418 noise :  0.302894798622
+Steps/minutes :  15971.9563554
+[10:34:07]  Episode :  422  steps :  67  reward :  91.3023620703 noise :  0.272615030147
+Steps/minutes :  15971.4927871
+[10:34:08]  Episode :  423  steps :  75  reward :  90.6292922412 noise :  0.784292657863
+Steps/minutes :  15970.2429535
+[10:34:08]  Episode :  424  steps :  67  reward :  91.6008512617 noise :  0.0732747779755
+Steps/minutes :  15970.0620747
+[10:34:08]  Episode :  425  steps :  75  reward :  90.8922852185 noise :  0.672388696793
+Steps/minutes :  15969.9088111
+[10:34:09]  Episode :  426  steps :  67  reward :  91.7566436649 noise :  0.149258634168
+Steps/minutes :  15969.9003659
+[10:34:09]  Episode :  427  steps :  68  reward :  91.7288946917 noise :  0.475668585018
+Steps/minutes :  15969.752299
+[10:34:09]  Episode :  428  steps :  73  reward :  92.6750196426 noise :  0.659575193205
+Steps/minutes :  15969.5832333
+[10:34:09]  Episode :  429  steps :  67  reward :  92.1117881614 noise :  0.217371530091
+Steps/minutes :  15968.8667666
+[10:34:10]  Episode :  430  steps :  67  reward :  91.7953420439 noise :  0.00788308263939
+Steps/minutes :  15968.4275681
+[10:34:10]  Episode :  431  steps :  67  reward :  91.3646718865 noise :  0.12701709624
+Steps/minutes :  15968.0378814
+[10:34:10]  Episode :  432  steps :  67  reward :  91.9144427442 noise :  0.0961919043897
+Steps/minutes :  15967.2952239
+[10:34:10]  Episode :  433  steps :  74  reward :  90.3221145993 noise :  0.731136569738
+Steps/minutes :  15967.1330922
+[10:34:11]  Episode :  434  steps :  68  reward :  91.2438757903 noise :  0.584750955109
+Steps/minutes :  15966.5821048
+[10:34:11]  Episode :  435  steps :  67  reward :  92.24091854 noise :  0.284842815523
+Steps/minutes :  15965.2419116
+[10:34:11]  Episode :  436  steps :  71  reward :  90.3412544802 noise :  0.951800269363
+Steps/minutes :  15964.0257972
+[10:34:11]  Episode :  437  steps :  69  reward :  89.2414847263 noise :  0.788216619264
+Steps/minutes :  15963.4569134
+[10:34:12]  Episode :  438  steps :  70  reward :  89.172948153 noise :  0.787476148728
+Steps/minutes :  15963.2652783
+[10:34:12]  Episode :  439  steps :  67  reward :  91.7921295769 noise :  0.0694447162564
+Steps/minutes :  15961.435891
+[10:34:12]  Episode :  440  steps :  68  reward :  91.1778960983 noise :  0.575884497787
+Steps/minutes :  15959.5870302
+[10:34:13]  Episode :  441  steps :  68  reward :  91.7199817566 noise :  0.325000579206
+Steps/minutes :  15959.4597569
+[10:34:13]  Episode :  442  steps :  68  reward :  90.7654752686 noise :  0.552758467274
+Steps/minutes :  15959.3244393
+[10:34:13]  Episode :  443  steps :  69  reward :  90.4270887443 noise :  0.640830603498
+Steps/minutes :  15958.0190458
+[10:34:13]  Episode :  444  steps :  72  reward :  89.0292946081 noise :  0.902084030534
+Steps/minutes :  15956.5903524
+[10:34:14]  Episode :  445  steps :  67  reward :  89.9494757479 noise :  0.386885347984
+Steps/minutes :  15956.4875299
+[10:34:14]  Episode :  446  steps :  72  reward :  88.919301978 noise :  0.970680135365
+Steps/minutes :  15956.2861411
+[10:34:14]  Episode :  447  steps :  67  reward :  91.6917720882 noise :  0.220893580125
+Steps/minutes :  15955.7538862
+[10:34:15]  Episode :  448  steps :  71  reward :  93.012839351 noise :  0.439043443184
+Steps/minutes :  15955.2389722
+[10:34:15]  Episode :  449  steps :  68  reward :  91.9870577778 noise :  0.472982756766
+Steps/minutes :  15954.8809505
+[10:34:15]  Episode :  450  steps :  74  reward :  89.4538103703 noise :  0.886191435566
+Steps/minutes :  15954.1855077
+[10:34:15]  Episode :  451  steps :  70  reward :  91.8937997401 noise :  0.6210891382
+Steps/minutes :  15953.5427677
+[10:34:16]  Episode :  452  steps :  70  reward :  87.0523908652 noise :  0.990879971583
+Steps/minutes :  15947.7667628
+[10:34:16]  Episode :  453  steps :  67  reward :  91.5934705976 noise :  0.372464150241
+Steps/minutes :  15947.1124439
+[10:34:16]  Episode :  454  steps :  67  reward :  91.9136849527 noise :  0.157713898913
+Steps/minutes :  15946.447508
+[10:34:17]  Episode :  455  steps :  67  reward :  91.2639153553 noise :  0.207248613947
+Steps/minutes :  15945.6138226
+[10:34:17]  Episode :  456  steps :  72  reward :  90.8327265626 noise :  0.640151021782
+Steps/minutes :  15944.7659021
+[10:34:17]  Episode :  457  steps :  68  reward :  90.4110777214 noise :  0.74561983344
+Steps/minutes :  15944.0567661
+[10:34:17]  Episode :  458  steps :  67  reward :  91.8002880193 noise :  0.0983399949436
+Steps/minutes :  15943.5151864
+[10:34:18]  Episode :  459  steps :  71  reward :  91.3033285312 noise :  0.578307964779
+Steps/minutes :  15942.7601355
+[10:34:18]  Episode :  460  steps :  67  reward :  92.379852453 noise :  0.0443180754336
+Steps/minutes :  15941.8242139
+[10:34:18]  Episode :  461  steps :  67  reward :  90.4288909899 noise :  0.238560612396
+Steps/minutes :  15941.4211742
+[10:34:18]  Episode :  462  steps :  69  reward :  92.0267546876 noise :  0.319294171262
+Steps/minutes :  15941.03644
+[10:34:19]  Episode :  463  steps :  71  reward :  90.3404870879 noise :  0.874928436418
+Steps/minutes :  15940.2462574
+[10:34:19]  Episode :  464  steps :  70  reward :  93.1899063185 noise :  0.194451560836
+Steps/minutes :  15939.6478475
+[10:34:19]  Episode :  465  steps :  67  reward :  90.9168728335 noise :  0.357027548887
+Steps/minutes :  15938.9740696
+[10:34:20]  Episode :  466  steps :  71  reward :  88.6760498082 noise :  0.981844161825
+Steps/minutes :  15938.5060839
+[10:34:20]  Episode :  467  steps :  68  reward :  90.2405603522 noise :  0.525342621418
+Steps/minutes :  15938.1286432
+[10:34:20]  Episode :  468  steps :  74  reward :  90.6980160945 noise :  0.854994260185
+Steps/minutes :  15937.9247629
+[10:34:20]  Episode :  469  steps :  70  reward :  91.7450695204 noise :  0.774570107956
+Steps/minutes :  15937.7539679
+[10:34:21]  Episode :  470  steps :  67  reward :  90.8563184253 noise :  0.327443497437
+Steps/minutes :  15937.057957
+[10:34:21]  Episode :  471  steps :  66  reward :  91.357095968 noise :  0.210261785657
+Steps/minutes :  15936.3955898
+[10:34:21]  Episode :  472  steps :  67  reward :  91.6366537691 noise :  0.260297728831
+Steps/minutes :  15936.192472
+[10:34:21]  Episode :  473  steps :  69  reward :  90.5963691179 noise :  0.667336878796
+Steps/minutes :  15936.1119751
+[10:34:22]  Episode :  474  steps :  68  reward :  91.6751289574 noise :  0.171034756518
+Steps/minutes :  15935.6684313
+[10:34:22]  Episode :  475  steps :  69  reward :  91.2779074235 noise :  0.564285555064
+Steps/minutes :  15935.5119482
+[10:34:22]  Episode :  476  steps :  72  reward :  90.1634349748 noise :  0.886092383085
+Steps/minutes :  15934.9826352
+[10:34:22]  Episode :  477  steps :  71  reward :  87.4782623123 noise :  0.982897297406
+Steps/minutes :  15934.2786535
+[10:34:23]  Episode :  478  steps :  68  reward :  89.924170935 noise :  0.820172550383
+Steps/minutes :  15933.606874
+[10:34:23]  Episode :  479  steps :  71  reward :  91.2622684617 noise :  0.590448001792
+Steps/minutes :  15933.1190404
+[10:34:23]  Episode :  480  steps :  67  reward :  91.4027113344 noise :  0.426121194405
+Steps/minutes :  15932.8883217
+[10:34:24]  Episode :  481  steps :  66  reward :  90.8115259315 noise :  0.055154682018
+Steps/minutes :  15932.4010401
+[10:34:24]  Episode :  482  steps :  66  reward :  90.9998990035 noise :  0.000556701124323
+Steps/minutes :  15932.3417885
+[10:34:24]  Episode :  483  steps :  69  reward :  90.2839389244 noise :  0.43042650691
+Steps/minutes :  15931.4951282
+[10:34:24]  Episode :  484  steps :  73  reward :  90.1874775242 noise :  0.883473693781
+Steps/minutes :  15931.3632226
+[10:34:25]  Episode :  485  steps :  67  reward :  90.2170905696 noise :  0.337533367584
+Steps/minutes :  15930.5867329
+[10:34:25]  Episode :  486  steps :  67  reward :  91.0522754863 noise :  0.0543414951281
+Steps/minutes :  15930.5444803
+[10:34:25]  Episode :  487  steps :  73  reward :  90.6615957842 noise :  0.999334541102
+Steps/minutes :  15930.0053816
+[10:34:25]  Episode :  488  steps :  68  reward :  89.7988437897 noise :  0.734111930139
+Steps/minutes :  15929.790759
+[10:34:26]  Episode :  489  steps :  68  reward :  90.8410166134 noise :  0.492944413833
+Steps/minutes :  15929.441224
+[10:34:26]  Episode :  490  steps :  69  reward :  89.2824885164 noise :  0.638559914352
+Steps/minutes :  15928.9739918
+[10:34:26]  Episode :  491  steps :  68  reward :  90.3028678255 noise :  0.373530979235
+Steps/minutes :  15928.5316711
+[10:34:26]  Episode :  492  steps :  67  reward :  89.7556681759 noise :  0.427973678666
+Steps/minutes :  15928.0431391
+[10:34:27]  Episode :  493  steps :  67  reward :  91.3892327815 noise :  0.408012894093
+Steps/minutes :  15927.4327805
+[10:34:27]  Episode :  494  steps :  66  reward :  90.3030606652 noise :  0.165809742392
+Steps/minutes :  15927.346849
+[10:34:27]  Episode :  495  steps :  73  reward :  90.6468241128 noise :  0.990337085337
+Steps/minutes :  15927.1436123
+[10:34:28]  Episode :  496  steps :  73  reward :  91.0346353344 noise :  0.831781410212
+Steps/minutes :  15926.8370401
+[10:34:28]  Episode :  497  steps :  67  reward :  90.396551289 noise :  0.248465729917
+Steps/minutes :  15926.6994987
+[10:34:28]  Episode :  498  steps :  67  reward :  91.0106237441 noise :  0.011395510451
+Steps/minutes :  15926.0657567
+[10:34:28]  Episode :  499  steps :  71  reward :  91.7690183449 noise :  0.348588272681
+Steps/minutes :  15925.3860619

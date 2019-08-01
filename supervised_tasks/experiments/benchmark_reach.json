@@ -1,0 +1,95 @@
+{
+	"common":{
+		"name": "benchmark_reach",
+		"runs": 10,
+		"M": 1032,
+		"n test":500,
+		"step test":32,
+		"n cross":1000
+	},
+	"functions":
+	[
+		{ 
+			"name": "multi dimensional",
+			"legend":"Robotic Arm",
+			"input dimension":2,
+			"components":
+			[
+				{
+					"name":"first",
+					"output bounds":[0.354,0.707]
+				},
+				{
+					"name":"second",
+					"output bounds":[0.354,0.707]
+				}
+			],
+			"input bounds": [[0.354,0.707],[0.354,0.707]]
+		}
+	],
+	"algorithms":
+	[
+		{
+			"type":"list",
+			"name": "MultiFloKeepSynapses",
+			"legend":"Bump",
+			"alpha": 0.025,
+			"alpha synapse":[0.18],
+			"counter threshold":[8],
+			"error coeff":[1],
+			"mode":"average",
+			"prune_constant":[50000],
+			"k output factor":[3] , 
+			"k input factor":[3], 
+			"minimal_number_synapses":[200],
+			"init error":0.4
+		},
+		{
+			"type":"list",
+			"name": "reinforce",
+			"legend":"Reinforce",
+			"width layers":100,
+			"coeff":[0.3],
+			"alpha error":[0.01]
+			
+		},
+		{
+			"type":"list",
+			"name": "perceptron",
+			"legend":["NN"],
+			"batch size":[1],
+			"width layers":[100],
+			"learning rate":[1.0],
+			"epochs":[1]
+		},
+		{
+			"type":"list",
+			"name": "perceptron2",
+			"legend":["MLP, backprop, std. par."],
+			"batch size":[32],
+			"width layers":[100],
+			"learning rate":[0.01],
+			"epochs":[1]
+		}
+	],
+	"mappings":
+	[
+		{
+			"input": {
+				"n":50,
+				"type":"linear"
+			},
+			"output": {
+
+				"n":50,
+				"type":"reach", 
+				"grid":"true",
+				"length long arm":0.75,
+				"length short arm":0.3,
+				"bounds":[[-0.2,1.1],[-0.2,3.4]]
+			}
+		}
+	]
+	
+}
+
