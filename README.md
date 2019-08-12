@@ -1,4 +1,4 @@
-This is the source code for the paper **Adaptive Tuning Curve Widths improve Sample Efficient Learning**. This code implements 
+This is the source code for the paper **Adaptive Tuning Curve Widths improve Sample Efficient Learning**. The described algorithms are implemented and benchmarked.
 
 ## Installing the repository and packages requirements
 
