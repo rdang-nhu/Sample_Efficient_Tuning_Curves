@@ -56,10 +56,9 @@ Running an experiment file creates a log folder with the same name in **supervis
 
 A log file starts with the description of the corresponding configuration (algorithm and optimized function). Then, it contains different metrics measured throughout the training, for several runs.
 
-1. *batch step* is the current training step.
-2. *batch error* is the current average error (in case of incremental learning, the samples are split in two disjunct sets. *batch error 1* and *batch error 2* refer to the error on the corresponding set of samples.
-3. *test error* and *cross error* both represent the average error at the end of training, measured on two independent set of samples.
+1. *Step* is the current training step.
+2. *Error* is the current average error (in case of incremental learning, the samples are split in two disjunct sets. *batch error 1* and *batch error 2* refer to the error on the corresponding set of samples.
+3. *Test Error* and *Cross Error* both represent the average error at the end of training, measured on two independent set of samples.
 
 
 
-### Plotting a log file

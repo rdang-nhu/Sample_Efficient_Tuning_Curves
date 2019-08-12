@@ -62,7 +62,6 @@ class Perceptron(algorithms.Algorithm):
         elif(self.mappings_config["output"]["type"] == "reach"):
             self.acts = [custom_activation(i,self.output_bounds) for i in range(self.output_dim)]
             self.output = [ Dense(1)(self.layer2[i]) for i in range(self.output_dim) ]
-            print("Test test")
 
             # Get paramters
             d1 = self.mappings_config["output"]["length long arm"]
@@ -152,15 +151,12 @@ class Perceptron(algorithms.Algorithm):
                     if(self.incremental):
                         test_data,test_labels,_ = self.sample_data(self.n_test,1)
                         batch_error = self.model.evaluate(test_data,test_labels)
-                        print("step: ", step)
-                        print("batch error 1",batch_error)
-                        self.log("Batch Step:" + str(step),logging.INFO)
-                        self.log("Batch Error1: " + str(batch_error[1]),logging.INFO)
+                        self.log("Step: " + str(step),logging.INFO)
+                        self.log("Error1: " + str(batch_error[1]),logging.INFO)
                         test_data,test_labels,_ = self.sample_data(self.n_test,2)
                         batch_error = self.model.evaluate(test_data,test_labels)
-                        print("batch error 2",batch_error)
-                        self.log("Batch Step:" + str(step),logging.INFO)
-                        self.log("Batch Error2: " + str(batch_error[1]),logging.INFO)
+                        self.log("Step:" + str(step),logging.INFO)
+                        self.log("Error2: " + str(batch_error[1]),logging.INFO)
                             
                     else:
                         
@@ -168,8 +164,8 @@ class Perceptron(algorithms.Algorithm):
                         loss = self.model.evaluate(test_data,test_labels)
                         
                         # Log
-                        self.log("Batch Step:" + str(step),logging.INFO)
-                        self.log("Batch Error: " + str(loss[1]),logging.INFO)
+                        self.log("Step: " + str(step),logging.INFO)
+                        self.log("Error: " + str(loss[1]),logging.INFO)
 
                 # Train the neural network
                 slice_ = slice(step,min(step+self.batch_size,self.M))
@@ -189,8 +185,4 @@ class Perceptron(algorithms.Algorithm):
             self.log("Test Error: " + str(loss[1]),logging.INFO)
             self.log("Cross Error: " + str(cross_loss[1]),logging.INFO)
 
-            print("\n")
-            print("Metrics name",self.model.metrics_names)
-            print("Loss",loss)
-            print("\n")
         return 

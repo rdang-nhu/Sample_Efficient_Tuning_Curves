@@ -60,7 +60,6 @@ class FinalAlgorithm(algorithms.Algorithm):
         # Parameters for security margin
         if(not "error coeff" in algo_config):
             algo_config["error_coeff"] = 1
-        print("error coeff",algo_config["error coeff"])
         self.error_coeff = algo_config["error coeff"]
         # Synapse counter threshold
         self.counter_threshold = algo_config['counter threshold']
@@ -110,7 +109,6 @@ class FinalAlgorithm(algorithms.Algorithm):
         pypl.ylabel("Output neuron")
         fig, axes = pypl.subplots(nrows=3,ncols=5,sharex=True,sharey=True,figsize=[10,6])
         for i in range(len(axes.flat)):
-                print(i)
                 ax = axes.flat[i]
                 im = ax.imshow(self.record_synapses[i].reshape(100,100).T, vmin=0, vmax=1,cmap='plasma')
 
@@ -180,9 +178,6 @@ class FinalAlgorithm(algorithms.Algorithm):
                     self.input_shape)]
             ind_len = len(list_indexes)
             half_len = ind_len//2
-
-            
-
 
             for step in range(self.M):
 

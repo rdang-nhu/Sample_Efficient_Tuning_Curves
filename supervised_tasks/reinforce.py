@@ -93,10 +93,8 @@ class Reinforce(algorithms.Algorithm):
     
     def predict(self,data):
             probs = self.model.predict(np.array([data,]))
-            #print("p",probs)
             output_one_hot = np.random.choice(len(probs[0]),1,p=probs[0])
             j0 = self.convert_j0(output_one_hot)
-            #print("j0",j0)
             return j0,[output_one_hot]
 
     def compute_error(self,n):
@@ -119,15 +117,13 @@ class Reinforce(algorithms.Algorithm):
         if(step % self.step_test == 0):
             n_test = self.n_test
             error = self.compute_error(n_test)
-            self.log("Batch Step:" + str(step),logging.INFO)
-            self.log("Batch Error: " + str(error),logging.INFO)
+            self.log("Step:" + str(step),logging.INFO)
+            self.log("Error: " + str(error),logging.INFO)
 
     # Function to log batch error
     def log_test_error(self):
         error = self.compute_error(self.n_test)
         error1 = self.compute_error(self.n_cross)
-        print("test error",error)
-        print("cross error",error1)
         self.log("Test Error: " + str(error),logging.INFO)
         self.log("Cross Error: " + str(error1),logging.INFO)
 
@@ -160,14 +156,10 @@ class Reinforce(algorithms.Algorithm):
 
                 # Compare with label
                 E = self.opt_prob.feedback.get_error(value,labels[step])
-                #av_error = (1-self.alpha)*av_error+self.alpha*E
                 # Update weights with reinforce rule
-                #print("data step",data[step])
                 grads = self.function1( [[data[step]],output_one_hot])
                 probas = self.function2([[data[step]],output_one_hot])
 
-                #print("grads",np.max(grads[0]))
-                #print("probs",probas[0])
 
                 # Multiply by delta/proba
                 scaled_grads = self.coeff*(av_error-E)*np.array(grads)/max(probas[0],0.0000001)

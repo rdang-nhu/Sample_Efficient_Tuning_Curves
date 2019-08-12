@@ -191,9 +191,7 @@ class Algorithm:
     def log_new_run(self,run):
         self.log("NEW RUN",logging.INFO)
         self.log("Run Number: "+str(run),logging.INFO)
-        print("\n")
-        print("Run number:")
-        print(run)
+        print("Run number "+str(run))
 
     # Functions to print the synapses
     def print_probs(self,probs,input_shape,save=False,episode=0):
@@ -459,19 +457,19 @@ class Algorithm:
         if((step % self.step_test == 0) & (self.n_test > 0)):
             if(incr):
                 batch_error = self.evaluate(self.n_test,1)
-                self.log("Batch Step:" + str(step),logging.INFO)
-                self.log("Batch Error1: " + str(batch_error),logging.INFO)
+                self.log("Step: " + str(step),logging.INFO)
+                self.log("Error1: " + str(batch_error),logging.INFO)
                 batch_error = self.evaluate(self.n_test,2)
-                self.log("Batch Step:" + str(step),logging.INFO)
-                self.log("Batch Error2: " + str(batch_error),logging.INFO)
+                self.log("Step: " + str(step),logging.INFO)
+                self.log("Error2: " + str(batch_error),logging.INFO)
                 batch_error = self.evaluate(self.n_test,0,step)
-                self.log("Batch Step:" + str(step),logging.INFO)
-                self.log("Batch Error: " + str(batch_error),logging.INFO)
+                self.log("Step: " + str(step),logging.INFO)
+                self.log("Error: " + str(batch_error),logging.INFO)
                     
             else:
                 batch_error = self.evaluate(self.n_test,0,step)
-                self.log("Batch Step:" + str(step),logging.INFO)
-                self.log("Batch Error: " + str(batch_error),logging.INFO)
+                self.log("Step: " + str(step),logging.INFO)
+                self.log("Error: " + str(batch_error),logging.INFO)
 
     def log_test_cross_error(self):
         # Log test and cross error
