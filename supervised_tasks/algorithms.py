@@ -236,12 +236,6 @@ class Algorithm:
 
             half_k_output = k_output//2
             half_k_input = k_input//2
-            #print("half k input",half_k_input)
-            #print("half k output",half_k_output)
-          
-            # Modified to have different slicing bounds for each dimension
-            #print("i0",i0)
-            #print("k_input",k_input)
             slicing_bounds =\
                 [tuple(\
                 (max(i0[j]-half_k_input[i],0),
@@ -261,13 +255,6 @@ class Algorithm:
             act_synapses = [np.random.random_sample(aux.shape) < aux for aux in sliced_probs]
             activation = [np.tensordot(ones[i],act_synapses[i],len(slices_shape[i]))[0] for i in range(len(slices_shape))]
 
-#            print("Slices shape",slices_shape)
-#            print("Ones shape",[aux.shape for aux in ones])
-#            print("Slices",slices)
-#            print("Probs shape",self.probs.shape)
-#            print("Sliced probs shape",[aux.shape for aux in sliced_probs])
-#            print("Act shape",[aux.shape for aux in act_synapses])
-#            print("Activation shape",[aux.shape for aux in activation])
             
             # Do the convolution on output
             n_dims = len(activation[0].shape)
@@ -441,12 +428,6 @@ class Algorithm:
         mean = 0.
         list_preds = []
         for i in range(n):
-#            print("\n")
-#            print("data",data[i])
-#            print("index data",index_data[i])
-#            print("label",label[i])
-#            print("Output",self.opt_prob.expected_output_value[index_data[i][0]])
-#            print("\n")
             if(isinstance(self,MultiAS)):
                 j0 = self.compute_output_activation(index_data[i])
             else:
@@ -477,24 +458,17 @@ class Algorithm:
         if((step % self.step_test == 0) & (self.n_test > 0)):
             if(incr):
                 batch_error = self.evaluate(self.n_test,1)
-                print("step: ", step)
-                print("batch error 1",batch_error)
                 self.log("Batch Step:" + str(step),logging.INFO)
                 self.log("Batch Error1: " + str(batch_error),logging.INFO)
                 batch_error = self.evaluate(self.n_test,2)
-                print("batch error 2",batch_error)
                 self.log("Batch Step:" + str(step),logging.INFO)
                 self.log("Batch Error2: " + str(batch_error),logging.INFO)
                 batch_error = self.evaluate(self.n_test,0,step)
-                print("step: ", step)
-                print("batch error",batch_error)
                 self.log("Batch Step:" + str(step),logging.INFO)
                 self.log("Batch Error: " + str(batch_error),logging.INFO)
                     
             else:
                 batch_error = self.evaluate(self.n_test,0,step)
-                print("step: ", step)
-                print("batch error",batch_error)
                 self.log("Batch Step:" + str(step),logging.INFO)
                 self.log("Batch Error: " + str(batch_error),logging.INFO)
 
@@ -505,7 +479,6 @@ class Algorithm:
             self.log("Test Error: " + str(test_error),logging.INFO)
         if self.n_cross > 0:
             cross_error = self.evaluate(self.n_cross)
-            print("Cross Error: ",cross_error)
             self.log("Cross Error: " + str(cross_error),logging.INFO)
 
     # Read step intervals

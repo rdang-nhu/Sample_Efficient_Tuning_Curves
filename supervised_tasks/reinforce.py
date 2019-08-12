@@ -35,8 +35,6 @@ class Reinforce(algorithms.Algorithm):
         self.model = keras.Model(inputs=input_layer,outputs=self.output)
         # Get the weights (we use a custom optimization procedure here)
         self.model_weights = self.model.trainable_weights
-        self.model.summary()
-        print(self.model_weights)
 
 
         # Get the gradients
@@ -122,8 +120,6 @@ class Reinforce(algorithms.Algorithm):
         if(step % self.step_test == 0):
             n_test = self.n_test
             error = self.compute_error(n_test)
-            print("step: ", step)
-            print("batch error",error)
             self.log("Batch Step:" + str(step),logging.INFO)
             self.log("Batch Error: " + str(error),logging.INFO)
 

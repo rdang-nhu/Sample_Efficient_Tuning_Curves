@@ -22,8 +22,6 @@ class custom_activation:
     def __init__(self,i,bounds):
         self.left = bounds[i][0]
         self.right = bounds[i][1]
-        print("i",i)
-        print("bounds",self.left,self.right)
 
     def __call__(self,x):
         res =  keras.backend.sigmoid(x) * (self.right - self.left)+self.left
@@ -91,9 +89,6 @@ class Perceptron(algorithms.Algorithm):
         optimizer = tf.train.GradientDescentOptimizer(algo_config['learning rate'])
 
         self.model.compile(optimizer,loss='mse',metrics=['mean_absolute_error'])
-        self.model.summary()
-        for layer in self.model.layers:
-            print(layer.input_shape)
 
 
 
