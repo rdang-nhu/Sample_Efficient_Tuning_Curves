@@ -16,7 +16,7 @@ virtualenv -p python3 venv; source venv/bin/activate
 ````
 Install the requirements with pip
 ````bash
-pip install requirements.txt
+pip install -r requirements.txt
 ````
 Now, you should be able to run the experiments.
 

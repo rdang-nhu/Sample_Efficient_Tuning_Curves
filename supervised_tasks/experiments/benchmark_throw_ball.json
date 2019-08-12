@@ -43,7 +43,7 @@
 			"legend":["MLP, backprop, opt. par."],
 			"batch size":[1],
 			"width layers":[100],
-			"learning rate":[0.3,0.1,0.],
+			"learning rate":[0.3,0.1],
 			"epochs":[1]
 		},
 		{

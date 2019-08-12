@@ -9,7 +9,7 @@ from functions import *
 from feedback import *
 import multi_flo_keep_synapses
 import multi_layer_perceptron
-import final_algorithm.FinalAlgorithm
+import final_algorithm
 import reinforce
 
 
