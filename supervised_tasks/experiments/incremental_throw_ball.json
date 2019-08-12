@@ -21,7 +21,7 @@
 	[
 		{
 			"type":"list",
-			"name": "MultiFloTheory1",
+			"name": "FinalAlgorithm1",
 			"legend":"Bump",
 			"alpha": 0.1,
 			"alpha synapse":0.5,

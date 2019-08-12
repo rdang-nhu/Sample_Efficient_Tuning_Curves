@@ -1,6 +1,9 @@
 *.pyc
 *.swp
-simple_functions/*.png
-simple_functions/figs/scatter/*
-gym_tests/figs/*
-gym_tests/logs/*
+supervised_tasks/*.png
+supervised_tasks/figs/scatter/*
+rl_tasks/figs/*
+rl_tasks/logs/*
+supervised_tasks/figs/*
+supervised_tasks/logs/*
+venv/

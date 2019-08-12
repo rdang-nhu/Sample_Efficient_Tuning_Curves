@@ -1,4 +1,4 @@
-# Adaptive K algorithm with multi dimensional mappings
+# Final version of the algorithm (dynamic and static k)
 # Author: Raphael Dang-Nhu
 # 15/04/2019
 
@@ -20,7 +20,7 @@ import algorithms
 from project_conf import *
 import matplotlib.pyplot as pypl
 
-class MultiFloTheory(algorithms.Algorithm):
+class FinalAlgorithm(algorithms.Algorithm):
 
     def __init__(self,algo_config,common_config,mapping_config,opt_problem,debug_file,perf_file):
 
@@ -175,7 +175,6 @@ class MultiFloTheory(algorithms.Algorithm):
                 init_average_error = self.algo_config["init error"]
             else:
                 init_average_error = self.compute_init_average_error()
-            print("Init average error",init_average_error)
 
             best_average_error = init_average_error
             self.probs = np.ones(total_shape)/2.
@@ -197,7 +196,6 @@ class MultiFloTheory(algorithms.Algorithm):
             prune_synapse = np.zeros(total_shape)
             activation_time_synapse = np.full(total_shape, 0.0)  #if this is above 1 prune away
             prune_summand = 1./(self.prune_constant*self.k_output_factor)            
-            #print("prune_summand",prune_summand)
             init_n_synapse = functools.reduce(mul,output_shape[1:])
             self.n_synapses = np.full(
                     self.input_shape+(output_shape[0],),
@@ -265,7 +263,6 @@ class MultiFloTheory(algorithms.Algorithm):
                     slices = input_slices+middle_slices+output_slices
                     middle_output_slices = middle_slices+output_slices
 
-                    #print("slices",slices)
                         
                     sliced_probs = self.probs[slices]
                     if(hasattr(self,'static') and self.static):
@@ -294,9 +291,6 @@ class MultiFloTheory(algorithms.Algorithm):
                     test_matrix2=np.tensordot(counter_neuron[input_slices], test_matrix, axes=0)
                     test_neuron_counter = (test_matrix2>= self.counter_neuron_threshold)
 
-
-                    #print('test shape', np.shape(test), '/n input slices shape', np.shape(input_slices), '\n test neuron shape', \
-                    #    np.shape(test_neuron_counter), 'test_neuron_counter', np.shape(test_neuron_counter), 'test matrix', np.shape(test_matrix), 'test matrix2', np.shape(test_matrix2))
                     test_00 = np.logical_and(test,test_matrix2)
                     test_0 = np.logical_and(test_00,sliced_probs < 0.99)
                     E_matrix=np.full(np.shape(test_0), E)
@@ -312,7 +306,6 @@ class MultiFloTheory(algorithms.Algorithm):
 
                     sliced_n_syn = self.n_synapses[input_slices+middle_slices]
                     sliced_n_syn -= delta_n_synapses
-                    #print("sum",np.sum(self.n_synapses))
                     counter_synapse[slices][test_0] = 0
                     if(self.mode == 1):
                         average_error_synapse[slices][test_0] = 0
@@ -321,129 +314,7 @@ class MultiFloTheory(algorithms.Algorithm):
                     test_minimal = np.logical_and(delta_n_synapses > 0,sliced_n_syn < self.minimal_number_synapses)
                     sliced_probs[test_minimal] = sliced_probs[test_minimal]*2
                     
-#                # For each concerned synapse:
-#                for i in range(len(output_slicing_bounds)):
-#                    for input_neuron in iterator[i]:
-#                        out_iterator = self.get_iterator(output_slicing_bounds[i])
-#                        prune_synapse[input_neuron] = prune_synapse[input_neuron] + prune_summand
-#
-#                        average_error_neuron[input_neuron] =\
-#                                average_error_neuron[input_neuron]*(1-self.alpha) +\
-#                                E*self.alpha
-#                        for output_neuron in out_iterator:
-#
-#                            activation_time_synapse[input_neuron][i][output_neuron]=step
-#
-#                            # If synapse still exists
-#                            if(self.probs[input_neuron][i][output_neuron] > 0.01):
-#
-#                                prune_synapse[input_neuron][i][output_neuron]=0.0
-#
-#                                # Update average error
-#                                if(self.mode == 0):
-#                                    average_error_synapse[input_neuron][i][output_neuron] =\
-#                                            average_error_synapse[input_neuron][i][output_neuron]*(1-self.alpha_synapse) +\
-#                                            E*self.alpha_synapse
-#                                else: 
-#                                    average_error_synapse[input_neuron][i][output_neuron] += E/self.counter_threshold
-#                                counter_synapse[input_neuron][i][output_neuron] += 1
-#
-#                                # If counter reached threshold:
-#                                if(counter_synapse[input_neuron][i][output_neuron] >= self.counter_threshold and self.probs[input_neuron][i][output_neuron]<0.99):
-#
-#                                    # If error is bigger than average, delete synapse, and update n synapses
-#                                    #counter_synapse[input_neuron,i][output_neuron] = 0
-#
-#                                    # Check synapse value
-#                                    if(average_error_synapse[input_neuron][i][output_neuron] > self.error_coeff * average_error_neuron[input_neuron]):
-#
-#                                            self.probs[input_neuron][i][output_neuron] = 0.
-#                                            self.n_synapses[input_neuron][i] -= 1
-#                                            counter_synapse[input_neuron][i][output_neuron] = 0
-#                                            if self.n_synapses[input_neuron][i]== self.minimal_number_synapses:
-#                                                        self.probs[input_neuron][i]= self.probs[input_neuron][i]*2
-#
-#                                    # Elif average mode, reset average to 0
-#                                    elif(self.mode == 1):
-#                                            
-#                                            average_error_synapse[input_neuron][i][output_neuron] = 0.
-                if step==0:
-                    checking_active_syn_time= 5* self.input_shape[0]*self.k_output_factor// min(k_output)
-                    #print('checking_active_syn_time', checking_active_syn_time)
-                    running_mean_error = E
-                    running_mean_k = k_output
-                else:
-
-                    running_mean_k = running_mean_k*0.98 + 0.02*k_output
-                    running_mean_error = running_mean_error*0.98 + 0.02*E
-
-                if step % 50 == 49:
-                    #print("min synapse",np.min(self.n_synapses))
-                    
-                    #print("n synapse",np.sum(self.probs > 0))
-                    #print('step', step, '\n mean error', running_mean_error, '\n mean k', running_mean_k,'\n check time', checking_active_syn_time)  
-                    #print('number_synapse', np.transpose(n_synapses))
-                    printing=False
-                    if printing:
-                        for z in range(0,self.input_shape[0],75):
-                            for i in range(len(output_iterators)):
-                                print('Output dimension', i)
-                                print('input synapse', z, '\n', self.probs[z][i], '\n counter synapse', z, '\n', counter_synapse[z][i], \
-                                    '\n average error neuron',z, \
-                                    np.around(average_error_neuron[z],2), '\n average error synapses', np.around(average_error_synapse[z][i],2), \
-                                    '\n activation time', activation_time_synapse[z][i], '\n delete', self.input_shape[0]*self.k_output_factor/self.n_synapses[z][i])
-#                prune_inactive_syn_mode_1=False       
-#                if step == checking_active_syn_time and prune_inactive_syn_mode_1:
-#                    prune_const=6
-#                    prune_const2=10
-#                    checking_active_syn_time +=  self.input_shape[0]*self.k_output_factor// min(running_mean_k)
-#                    print('step', step, 'next_check_time', checking_active_syn_time)
-#                    # For each concerned synapse:
-#                    for i in range(len(output_slicing_bounds)):
-#                        for input_neuron in iterator[i]:
-#                            out_iterator = self.get_iterator(output_slicing_bounds[i])
-#                            for output_neuron in out_iterator:
-#
-#                                # If synapse still exists
-#                                if(self.probs[input_neuron][i][output_neuron] > 0.01 and self.probs[input_neuron,i][output_neuron]<0.99):
-#                                    # Check synapse value
-#                                        if(average_error_synapse[input_neuron,i][output_neuron] > 1.5 * average_error_neuron[input_neuron] \
-#                                            and step > activation_time_synapse[input_neuron,i][output_neuron]+ prune_const*self.input_shape[0]*self.k_output_factor/n_synapses[input_neuron][i] ):
-#
-#                                                self.probs[input_neuron,i][output_neuron] = 0.
-#                                                n_synapses[input_neuron,i] -= 1
-#                                                counter_synapse[input_neuron,i][output_neuron] = 0
-#                                                if n_synapses[input_neuron,i]== self.minimal_number_synapses:
-#                                                        self.probs[input_neuron,i]= self.probs[input_neuron,i]*2                                                
-#                                        elif(average_error_synapse[input_neuron,i][output_neuron] > 1.1* average_error_neuron[input_neuron] \
-#                                            and step > activation_time_synapse[input_neuron,i][output_neuron]+ prune_const2*self.input_shape[0]*self.k_output_factor/n_synapses[input_neuron][i] ):
-#
-#                                                self.probs[input_neuron,i][output_neuron] = 0.
-#                                                n_synapses[input_neuron,i] -= 1
-#                                                counter_synapse[input_neuron,i][output_neuron] = 0                                   
-#                                                if n_synapses[input_neuron,i]== self.minimal_number_synapses:
-#                                                        self.probs[input_neuron,i]= self.probs[input_neuron,i]*2
-
-
-                prune_inactive_syn_mode_2=True       
-                if step%10 == 0 and prune_inactive_syn_mode_2:
-                        #print('step', step, 'prun inactive synapses')
-                        # For each concerned synapse:
-#                        for input_neuron in list_indexes:
-#                            for i in range(len(output_slicing_bounds)):
-#                                for output_neuron in np.ndindex(output_shape[1:]):
-#
-#                                    # If synapse still exists
-#                                    if(self.probs[input_neuron][i][output_neuron] > 0.01 and self.probs[input_neuron][i][output_neuron]<0.99):
-#                                        # Check synapse value
-#                                            #if(sum_time_synapse[input_neuron,i][output_neuron] > 1.0 * sum_time_neuron[input_neuron] \
-#                                            #    and prune_synapse[input_neuron, i, output_neuron] > 1.0 ):
-#                                            if(prune_synapse[input_neuron][i][output_neuron] >1.0 and average_error_synapse[input_neuron][i][output_neuron] > 1.0* average_error_neuron[input_neuron]):
-#                                                    self.probs[input_neuron][i][output_neuron] = 0.
-#                                                    self.n_synapses[input_neuron][i] -= 1
-#                                                    counter_synapse[input_neuron][i][output_neuron] = 0
-#                                                    if self.n_synapses[input_neuron][i]== self.minimal_number_synapses:
-#                                                            self.probs[input_neuron][i]= self.probs[input_neuron][i]*2                                                    
+                if step%10 == 0:
                     
                         # Rewriting with matrices 
                         test1 = self.probs > 0.01
@@ -451,7 +322,6 @@ class MultiFloTheory(algorithms.Algorithm):
                         test3 = prune_synapse > 1.0
 
                         test4 = (average_error_synapse.T > average_error_neuron.T).T
-                        #test = np.logical_and(test1,np.logical_and(test2,np.logical_and(test3,test4)))
                         test = np.logical_and(test1,np.logical_and(test2,test3))
         
                         self.probs[test] = 0.
@@ -461,79 +331,12 @@ class MultiFloTheory(algorithms.Algorithm):
                         axes = tuple(range(len(self.input_shape)+1,len(total_shape)))
                         delta_n_synapses = np.sum(test,axis=axes)
                         
-                        #print('Number remaining',np.sum(self.probs > 0))
                         self.n_synapses -= delta_n_synapses
 
                         test_minimal = np.logical_and(delta_n_synapses > 0,self.n_synapses < self.minimal_number_synapses)
                         self.probs[test_minimal] = self.probs[test_minimal]*2
 
                         
-                        if step+1 % 50000 == 0:
-                            print('num synapses', self.n_synapses)
-
-                    #aa=np.ones(total_shape)*step - np.tensordot(prune_const* self.input_shape[0]*self.conf_coeff/n_synapses, np.ones(output_shape[1]),axes=0)
-                    #probs = np.multiply(probs, (activation_time_synapse > aa))
-                    #print('check',checking_active_syn_time)
-                    #print('aa',aa)
-                    #print('activation_time', activation_time_synapse )
-
-                if step%100==49:  
-                    a=step//50  +10
-                    if False: #plot probs for one dim functions
-                        file_name= self.name+'_probs_plot_'+str(a)
-                        self.save_print_probs(self.probs,self.input_shape,file_name)
-                        file_name= self.name+'_prune_plot_'+str(a)
-                        self.save_print_probs(prune_synapse,self.input_shape,file_name)
-
-                    if False:
-
-                        x1=15
-                        x2=15
-                        probs_plot= self.probs[x1, x2, 0, :, :]
-                        file_name= self.name+ str(x1)+'_'+str(x2)+'_'+str(a)+'_probs_plot_'
-                        pypl.imshow(probs_plot)
-                        pypl.savefig(file_name)
-                        prune_plot= prune_synapse[x1, x2, 0, :, :]
-                        file_name= self.name+ str(x1)+'_'+str(x2)+'_'+str(a)+'_prune_plot_'
-                        pypl.imshow(prune_plot)
-                        pypl.savefig(file_name)
-                        x1=20
-                        x2=20
-                        probs_plot= self.probs[x1, x2, 0, :, :]
-                        file_name= self.name+ str(x1)+'_'+str(x2)+'_'+str(a)+'_probs_plot_'
-                        pypl.imshow(probs_plot)
-                        pypl.savefig(file_name)
-                        prune_plot= prune_synapse[x1, x2, 0, :, :]
-                        file_name= self.name+ str(x1)+'_'+str(x2)+'_'+str(a)+'_prune_plot_'
-                        pypl.imshow(prune_plot)
-                        pypl.savefig(file_name)
-                        x1=25
-                        x2=25
-                        probs_plot= self.probs[x1, x2, 0, :, :]
-                        file_name= self.name+ str(x1)+'_'+str(x2)+'_'+str(a)+'_probs_plot_'
-                        pypl.imshow(probs_plot)
-                        pypl.savefig(file_name)
-                        prune_plot= prune_synapse[x1, x2, 0, :, :]
-                        file_name= self.name+ str(x1)+'_'+str(x2)+'_'+str(a)+'_prune_plot_'
-                        pypl.imshow(prune_plot)
-                        pypl.savefig(file_name)
-                        x1=10
-                        x2=10
-                        probs_plot= self.probs[x1, x2, 0, :, :]
-                        file_name= self.name+ str(x1)+'_'+str(x2)+'_'+str(a)+'_probs_plot_'
-                        pypl.imshow(probs_plot)
-                        pypl.savefig(file_name)
-                        prune_plot= prune_synapse[x1, x2, 0, :, :]
-                        file_name= self.name+ str(x1)+'_'+str(x2)+'_'+str(a)+'_prune_plot_'
-                        pypl.imshow(prune_plot)
-                        pypl.savefig(file_name)                        
-                        #self.save_print_probs(probs_plot,self.input_shape,file_name)
-                        #prune_plot= self.probs[25, :, 0, :, 25]
-                        #file_name= self.name+'_prune_plot_'+str(a)
-                        #self.save_print_probs(prune_plote,self.input_shape,file_name)                        
-                #if step%20==0:
-                #    self.print_probs(probs,self.input_shape)
-
 
 
             if(run == 0 and self.plot_synapses):
@@ -541,9 +344,4 @@ class MultiFloTheory(algorithms.Algorithm):
 
             self.log_test_cross_error()
 
-            # Log final results
-            self.log("\n",logging.DEBUG)
-            self.log("Counter synapses:",logging.DEBUG)
-            self.log(counter_synapse[-2,0],logging.DEBUG)
-            self.log("\n",logging.DEBUG)
         return 
