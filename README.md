@@ -47,3 +47,19 @@ The files are contained in the **rl_tasks/experiments/** folder.
 
 1. **car.json** is for the MountainCarContinuous environment
 2.  **pendulum.json** is for the InvertedPendulum environment
+
+## Experiment logs
+
+Running an experiment file creates a log folder with the same name in **supervised_tasks/logs/perf/** or **rl_tasks/logs/perf** according to the kind of task. In this folder, you will find one file per tested configuration, plus a file **description.json** with the configurations description (used by the plotting engine). Each log file should start with the description of the algorithm used to generate the log.
+
+### Description of log files
+
+A log file starts with the description of the corresponding configuration (algorithm and optimized function). Then, it contains different metrics measured throughout the training, for several runs.
+
+1. *batch step* is the current training step.
+2. *batch error* is the current average error (in case of incremental learning, the samples are split in two disjunct sets. *batch error 1* and *batch error 2* refer to the error on the corresponding set of samples.
+3. *test error* and *cross error* both represent the average error at the end of training, measured on two independent set of samples.
+
+
+
+### Plotting a log file
