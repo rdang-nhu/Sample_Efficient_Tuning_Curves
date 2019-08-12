@@ -1,4 +1,4 @@
-This is the source code for the paper **Adaptive Tuning Curve Widths improve Sample Efficient Learning**. This code implements 
+This is the source code for the paper **Adaptive Tuning Curve Widths improve Sample Efficient Learning**. The described algorithms are implemented and benchmarked.
 
 ## Installing the repository and packages requirements
 
@@ -35,7 +35,15 @@ For a reinforcement learning experiment, execute
 #### Supervised learning
 The files are contained in the **supervised_tasks/experiments/** folder.
 
+1. **benchmark_1D.json** contains the configuration for the one dimensional experiments
+2.  **benchmark_reach.json** is for the robotic arm task
+3.  **benchmark_throw_ball.json** is for the throw ball task
+4.  **comparison_k.json** is for the dynamic vs static width comparison
+5.  **incremental_throw_ball.json** is for the incremental learning plots
+6.  **plot_synapses.json** is to plot the synapses
 
 #### Reinforcement learning
 The files are contained in the **rl_tasks/experiments/** folder.
 
+1. **car.json** is for the MountainCarContinuous environment
+2.  **pendulum.json** is for the InvertedPendulum environment
