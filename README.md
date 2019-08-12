@@ -8,11 +8,11 @@ Clone the repository
  ````
 Enter the root folder
 ````bash
- cd Sample_Efficient_Tuning_Curves.git
+ cd Sample_Efficient_Tuning_Curves
  ````
 Create a virtual environment and activate it
 ````bash
-virtualenv -p python3 venv; source venv/bin/activate;
+virtualenv -p python3 venv; source venv/bin/activate
 ````
 Install the requirements with pip
 ````bash
