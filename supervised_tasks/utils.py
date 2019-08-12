@@ -7,7 +7,6 @@ import math
 import algorithms
 from functions import *
 from feedback import *
-import multi_flo_keep_synapses
 import multi_layer_perceptron
 import final_algorithm
 import reinforce
@@ -53,9 +52,7 @@ def config_extract_feedback(feedback_config):
 
 # Function to get algorithm class
 def name_to_class_ref(name,opt_problem):
-    if(name.startswith("MultiFloKeepSynapses")):
-        return multi_flo_keep_synapses.MultiFloKeepSynapses                     
-    elif(name.startswith("FinalAlgorithm")):
+    if(name.startswith("FinalAlgorithm")):
         return final_algorithm.FinalAlgorithm
     elif(name.startswith("perceptron")):
         return multi_layer_perceptron.Perceptron

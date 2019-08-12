@@ -68,7 +68,6 @@ class FinalAlgorithm(algorithms.Algorithm):
         self.prune_constant = algo_config['prune_constant']
         self.k_output_factor = algo_config['k output factor'] # k_output is num_syn/k_output_factor
         self.k_input_factor = algo_config['k input factor']# k input is num_syn/k_input_factor
-        #remark: k_input_factor should be small if output curve to learn is flat and large otherwise (output curve means hear the values encoded in the output layers)
         # if the  derivative of the output curve is at most b, then k_input_factor = b  
         if(hasattr(self,'static') and self.static):
             self.min_number_synapses_factor= algo_config['min_num_synapse_factor']
@@ -106,25 +105,6 @@ class FinalAlgorithm(algorithms.Algorithm):
         self.log(json.dumps(self.algo_config,indent=4),logging.INFO)
         return
 
-    # Compute the initial average error for neurons
-    def compute_init_average_error(self):
-        
-
-        # Else
-        if("components" in self.function_config):
-            res = 0
-            for comp in self.function_config["components"]:
-                [lb,rb] = comp["output bounds"]
-                res += rb - lb
-            return res/3.
-
-        # If throw ball
-        elif(self.mappings_config["output"]["type"] == "throw ball"):
-            [lb,rb] = self.function_config["output bounds"]
-            return (rb-lb)/3.
-        else:
-            [lb,rb] = self.function_config["output bounds"]
-            return (rb-lb)/3.
 
     def plot_synapse_history(self):
        

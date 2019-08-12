@@ -520,3 +520,23 @@ class Algorithm:
             self.k_static = algo_config["static"]
         else:
             self.static = False
+
+    # Compute the initial average error for neurons
+    def compute_init_average_error(self):
+        
+
+        # Else
+        if("components" in self.function_config):
+            res = 0
+            for comp in self.function_config["components"]:
+                [lb,rb] = comp["output bounds"]
+                res += rb - lb
+            return res/3.
+
+        # If throw ball
+        elif(self.mappings_config["output"]["type"] == "throw ball"):
+            [lb,rb] = self.function_config["output bounds"]
+            return (rb-lb)/3.
+        else:
+            [lb,rb] = self.function_config["output bounds"]
+            return (rb-lb)/3.
