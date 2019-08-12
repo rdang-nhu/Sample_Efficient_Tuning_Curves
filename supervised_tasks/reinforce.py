@@ -76,8 +76,7 @@ class Reinforce(algorithms.Algorithm):
         self.handle_bounds()
 
         # Log config 
-        self.debug_logger = algorithms.setup_logger("debug",debug_file,logging.DEBUG)
-        self.perf_logger = algorithms.setup_logger("perf",perf_file,logging.INFO)
+        self.create_logger(debug_file,perf_file)
         
         return
 

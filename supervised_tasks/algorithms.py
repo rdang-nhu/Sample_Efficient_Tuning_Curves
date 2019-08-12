@@ -2,6 +2,7 @@
 # Author: Raphael Dang-Nhu
 # 02/03/2019
 
+import json
 import collections
 from scipy import signal
 import itertools as it
@@ -540,3 +541,15 @@ class Algorithm:
         else:
             [lb,rb] = self.function_config["output bounds"]
             return (rb-lb)/3.
+
+    # Create logger
+    def create_logger(self,debug_file,perf_file):
+        # Log config 
+        self.debug_logger = setup_logger("debug",debug_file,logging.DEBUG)
+        self.perf_logger = setup_logger("perf",perf_file,logging.INFO)
+        
+        # Log parameters
+        self.log("Algorithm",logging.INFO)
+        self.log(json.dumps(self.algo_config,indent=4),logging.INFO)
+        self.log("Function",logging.INFO)
+        self.log(json.dumps(self.function_config,indent=4),logging.INFO)

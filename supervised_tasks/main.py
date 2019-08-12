@@ -30,11 +30,8 @@ class Experiment:
            feedback_config = config['feedback']
 
            # Printing info
-           print("Function: " + function['name'])
-           print("Input mapping: " + mapping['input']['type'])
-           print("Output mapping: " + mapping['output']['type'])
-           print("Algo name: "+algo['name'])
-           print("Feedback: "+feedback_config['name'])
+           print("Config:")
+           print(json.dumps(config,indent=4))
            
            # Get optimization problem
            problem = OptimizationProblem(function,mapping,feedback_config)

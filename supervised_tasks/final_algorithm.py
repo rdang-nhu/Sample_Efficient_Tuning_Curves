@@ -93,16 +93,12 @@ class FinalAlgorithm(algorithms.Algorithm):
         else:
             self.grid = False
 
-        # Log config 
-        self.debug_logger = algorithms.setup_logger("debug",debug_file,logging.DEBUG)
-        self.perf_logger = algorithms.setup_logger("perf",perf_file,logging.INFO)
+        # Scatter folder 
         self.scatter_folder = fig_folder+"scatter/"+str(int(time.time()))+"/"
-       
         if(not os.path.exists(self.scatter_folder)):
             os.makedirs(self.scatter_folder)
-        
-        # Log parameters
-        self.log(json.dumps(self.algo_config,indent=4),logging.INFO)
+    
+        self.create_logger(debug_file,perf_file)
         return
 
 

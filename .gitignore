@@ -2,6 +2,7 @@
 *.swp
 supervised_tasks/*.png
 supervised_tasks/figs/scatter/*
+supervised_tasks/figs/*
 rl_tasks/figs/*
 rl_tasks/logs/*
 supervised_tasks/figs/*
