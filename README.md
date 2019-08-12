@@ -60,5 +60,36 @@ A log file starts with the description of the corresponding configuration (algor
 2. *Error* is the current average error (in case of incremental learning, the samples are split in two disjunct sets. *batch error 1* and *batch error 2* refer to the error on the corresponding set of samples.
 3. *Test Error* and *Cross Error* both represent the average error at the end of training, measured on two independent set of samples.
 
+### Plotting the results of an experiment
 
+To generate the plots associated with an experiment, add a file **plots.json** to the log folder, and execute
+````bash
+./scripts.sh plot_supervised <folder>
+````
+for supervised tasks and 
+````bash
+./scripts.sh plot_rl <folder>
+````
+reinforcement learning tasks, where folder is the folder name, such as **folder.json**. This will create a folder in **supervised_tasks/logs/perf/** or **rl_tasks/logs/perf** with the generated figures. The **plots.json** file will define which figures to generate.
 
+#### Content of the plots.json file
+1. For all **benchmark** experiments
+````json
+[
+	{ 
+		"type":"benchmark"
+	}
+]
+	
+````
+2. For **comparison_k**
+````json
+[
+	{ 
+		"type":"benchmark"
+	},
+{ 
+		"type":"comp k"
+	}
+]
+````
