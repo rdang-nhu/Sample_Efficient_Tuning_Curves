@@ -93,3 +93,21 @@ reinforcement learning tasks, where folder is the folder name, such as **folder.
 	}
 ]
 ````
+3. For **incremental_throw_ball**
+````json
+[
+	
+	{ 
+		"type":"incremental error"
+	}
+]
+````
+4. For **plot_synapses**
+````json
+[
+	
+	{ 
+		"type":"incremental error"
+	}
+]
+````

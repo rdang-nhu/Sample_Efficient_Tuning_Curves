@@ -117,7 +117,7 @@ class Reinforce(algorithms.Algorithm):
         if(step % self.step_test == 0):
             n_test = self.n_test
             error = self.compute_error(n_test)
-            self.log("Step:" + str(step),logging.INFO)
+            self.log("Step: " + str(step),logging.INFO)
             self.log("Error: " + str(error),logging.INFO)
 
     # Function to log batch error

@@ -101,20 +101,15 @@ class LogParser:
                     if(sl[0] == "NEW"):
                         run += 1
                     elif(sl[0] == "Step:"):
-                        step = r.int(1)
+                        batch_step = r.int(1)
                     elif(sl[0] == "Cross"):
                         data["cross_error"][run] = r.float(2)
-                    elif(sl[0] == "Batch"):
-                        aux = sl[1].split(":")
-                        if(sl[1] == "Error:"):
-                            data["batch_error"][run][batch_step] = r.float(2)
-                        elif(sl[1] == "Error1:"):
-                            data["batch_error_1"][run][batch_step] = r.float(2)
-                        elif(sl[1] == "Error2:"):
-                            data["batch_error_2"][run][batch_step] = r.float(2)
-                        else:
-                            batch_step = int(sl[1].split(":")[1].rstrip())
-
+                    elif(sl[0] == "Error:"):
+                        data["batch_error"][run][batch_step] = r.float(1)
+                    elif(sl[0] == "Error1:"):
+                        data["batch_error_1"][run][batch_step] = r.float(1)
+                    elif(sl[0] == "Error2:"):
+                        data["batch_error_2"][run][batch_step] = r.float(1)
                     elif(sl[0] == "Test"):
                         data["test_error"][run] = r.float(2)
                     elif(sl[0] == "Error:"):
