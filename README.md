@@ -59,6 +59,7 @@ A log file starts with the description of the corresponding configuration (algor
 1. *Step* is the current training step.
 2. *Error* is the current average error (in case of incremental learning, the samples are split in two disjunct sets. *batch error 1* and *batch error 2* refer to the error on the corresponding set of samples.
 3. *Test Error* and *Cross Error* both represent the average error at the end of training, measured on two independent set of samples.
+4. In RL experiments, *Episode* refers to the episode number, and *Reward* to the reward for that episode.
 
 ### Plotting the results of an experiment
 

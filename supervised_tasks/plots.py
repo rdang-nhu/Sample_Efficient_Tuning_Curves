@@ -119,7 +119,7 @@ class Plotting_Environment:
             x2,y2,std2 = self.dict_to_array(data["mean_batch_error_2"],data["std_batch_error_2"])
             x,y,std = self.dict_to_array(data["mean_batch_error"],data["std_batch_error"])
 
-            if(config["algo"]["name"].startswith("Multi")):
+            if(config["algo"]["name"].startswith("Final")):
                 color1 = "C0"
                 color2 = "C1"
                 color = "C2"
