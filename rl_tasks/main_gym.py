@@ -5,7 +5,7 @@
 import sys
 import os
 
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'simple_functions'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'supervised_tasks'))
 
 import main
 from gym_utils import *

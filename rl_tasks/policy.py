@@ -13,8 +13,6 @@ from gym import spaces
 import tensorflow as tf
 import sys, os
 from gym_project_conf import *
-
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'simple_functions'))
 import algorithms
 
 # Class to represent a learning policy for a RL environment (inherits algorithm to get the tensorflow graph)
@@ -63,8 +61,6 @@ class Policy(algorithms.Algorithm):
         self.orb = self.env.action_space.high
         self.output_interval = (self.orb - self.olb)/float(self.non-1)
 
-        print("Intervals",self.left_bounds,self.right_bounds)
-        print("Output Interval",self.olb,self.orb)
 
         self.debug_logger = algorithms.setup_logger("debug",debug_file,logging.DEBUG)
         self.perf_logger = algorithms.setup_logger("perf",perf_file,logging.INFO)
