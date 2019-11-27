@@ -55,6 +55,12 @@ class FinalAlgorithm(algorithms.Algorithm):
         else:
             self.plot_synapses = False
 
+        # Initial probability
+        if "initial probability" in algo_config:
+            self.initial_probability = algo_config["initial probability"]
+        else:
+            self.initial_probability = 0.5
+
         # Number of runs
         self.number_of_runs = common_config['runs']
         # Parameters for security margin
@@ -150,8 +156,7 @@ class FinalAlgorithm(algorithms.Algorithm):
             else:
                 init_average_error = self.compute_init_average_error()
 
-            best_average_error = init_average_error
-            self.probs = np.ones(total_shape)/2.
+            self.probs = np.ones(total_shape)*self.initial_probability
             average_error_neuron = np.full(
                     self.input_shape,
                     init_average_error)
@@ -208,7 +213,6 @@ class FinalAlgorithm(algorithms.Algorithm):
                 
                 # Get the slice of synapses that are potentialy activated
 
-                n_synapse_log = self.n_synapses[i0]
                 k_input,k_output = self.get_k_input_output(i0)
                 half_k_output = k_output//2
 
@@ -223,7 +227,6 @@ class FinalAlgorithm(algorithms.Algorithm):
                     min(j0[i][j]+half_k_output[i]+1,output_shape[1]))\
                           for j in range(len(j0[i])) ) for i in range(len(j0))]
 
-                it_syn = np.zeros(total_shape)
                 for i in range(len(j0)):
                     input_bounds = slicing_bounds[i]
                     middle_bounds = ((i,i+1),)
@@ -232,9 +235,7 @@ class FinalAlgorithm(algorithms.Algorithm):
                     middle_slices = self.get_slices(middle_bounds)
                     output_slices = self.get_slices(output_bounds)
                     slices = input_slices+middle_slices+output_slices
-                    middle_output_slices = middle_slices+output_slices
 
-                        
                     sliced_probs = self.probs[slices]
                     if(hasattr(self,'static') and self.static):
                         prune_summand= float(k_output)/self.n_synapses[i0]/self.prune_constant
@@ -260,11 +261,9 @@ class FinalAlgorithm(algorithms.Algorithm):
                     test_shape_2=test_shape_1[len(np.shape(counter_neuron)):(len(total_shape)+1)]
                     test_matrix= np.full(test_shape_2, 1.0)
                     test_matrix2=np.tensordot(counter_neuron[input_slices], test_matrix, axes=0)
-                    test_neuron_counter = (test_matrix2>= self.counter_neuron_threshold)
 
                     test_00 = np.logical_and(test,test_matrix2)
                     test_0 = np.logical_and(test_00,sliced_probs < 0.99)
-                    E_matrix=np.full(np.shape(test_0), E)
                     if False:
                         test_1 = np.logical_and(test_0,(E_matrix.T > self.error_coeff * average_error_neuron[input_slices].T).T)
                     else:
@@ -281,7 +280,6 @@ class FinalAlgorithm(algorithms.Algorithm):
                     if(self.mode == 1):
                         average_error_synapse[slices][test_0] = 0
 
-
                     test_minimal = np.logical_and(delta_n_synapses > 0,sliced_n_syn < self.minimal_number_synapses)
                     sliced_probs[test_minimal] = sliced_probs[test_minimal]*2
                     
@@ -292,7 +290,6 @@ class FinalAlgorithm(algorithms.Algorithm):
                         test2 = self.probs < 0.99
                         test3 = prune_synapse > 1.0
 
-                        test4 = (average_error_synapse.T > average_error_neuron.T).T
                         test = np.logical_and(test1,np.logical_and(test2,test3))
         
                         self.probs[test] = 0.
