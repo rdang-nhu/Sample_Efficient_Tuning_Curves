@@ -1,22 +1,22 @@
 {
 	"common":{
-		"name": "benchmark_1D",
+		"name": "optimal_1D",
 		"runs": 10,
 		"M": 1032,
 		"n test":500,
-		"step test":32,
+		"step test":320,
 		"n cross":1000
 	},
 	"functions":
 	[
-		{ 
+		{
 			"name": "sin",
 			"legend":"Sinus",
 			"input dimension":1,
 			"input bounds": [[1,3]],
 			"output bounds":[-1.1,1.1]
 		},
-		{ 
+		{
 			"name": "polynomial",
 			"legend":"Second-Order Polynomial",
 			"input dimension":1,
@@ -26,44 +26,17 @@
 		}
 	],
 	"algorithms":
-	[
-		{
-			"type":"list",
-			"name": "reinforce",
-			"legend":"Reinforce",
-			"width layers":10,
-			"coeff":[1,0.1],
-			"alpha error":[0.03]
-			
-		},
+    [
 		{
 			"type":"list",
 			"name": "FinalAlgorithm1",
 			"legend":"Bump",
 			"alpha": 0.1,
 			"alpha synapse":0.5,
-			"prune_constant":[3,4],
-			"k output factor":[3.0,4.0], 
-			"k input factor":[3.0,4.0,9.0],
+			"prune_constant":3,
+			"k output factor":4.0,
+			"k input factor":[4.0,9.0],
 			"minimal_number_synapses":5
-		},
-		{
-			"type":"list",
-			"name": ["perceptron"],
-			"legend":["NN"],
-			"batch size":[1],
-			"width layers":[100],
-			"learning rate":[0.3,0.1],
-			"epochs":[1]
-		},
-		{
-			"type":"list",
-			"name": "perceptron2",
-			"legend":["MLP, backprop, std. par."],
-			"batch size":[32],
-			"width layers":[100],
-			"learning rate":[0.01],
-			"epochs":[1]
 		}
 	],
 	"mappings":
@@ -79,6 +52,5 @@
 			}
 		}
 	]
-	
-}
 
+}

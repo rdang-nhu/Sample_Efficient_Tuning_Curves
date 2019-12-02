@@ -72,6 +72,8 @@ class Plotting_Environment:
                     color="C0"
                 elif(name=="reinforce"):
                     color="C2"
+                elif(str.isdigit(name[-1:])):
+                    color="C"+name[-1:]
                 else:
                     color="C5"
                 return color

@@ -39,11 +39,13 @@ class FinalAlgorithm(algorithms.Algorithm):
             self.k_static=algo_config['static']
 
         # Average mode for synapses
-        if(algo_config['mode'] == "exponential"):
+        if(not "mode" in algo_config or algo_config['mode'] == "exponential"):
             self.mode = 0
             self.alpha_synapse = algo_config['alpha synapse']
-        elif(algo_config['mode'] == "average"):
-            self.mode = 1
+
+        # Unsupported in final version
+        #elif(algo_config['mode'] == "average"):
+        #    self.mode = 1
         else:
             raise ValueError("Average mode has unvalid value")
         
@@ -65,11 +67,8 @@ class FinalAlgorithm(algorithms.Algorithm):
         self.number_of_runs = common_config['runs']
         # Parameters for security margin
         if(not "error coeff" in algo_config):
-            algo_config["error_coeff"] = 1
+            algo_config["error coeff"] = 1.0
         self.error_coeff = algo_config["error coeff"]
-        # Synapse counter threshold
-        self.counter_threshold = algo_config['counter threshold']
-        self.counter_neuron_threshold = algo_config['counter neuron threshold']
         self.prune_constant = algo_config['prune_constant']
         self.k_output_factor = algo_config['k output factor'] # k_output is num_syn/k_output_factor
         self.k_input_factor = algo_config['k input factor']# k input is num_syn/k_input_factor
@@ -251,8 +250,6 @@ class FinalAlgorithm(algorithms.Algorithm):
                     if(self.mode == 0):
                         average_error_synapse[slices] *= (1-self.alpha_synapse)
                         average_error_synapse[slices] += E*self.alpha_synapse
-                    else:
-                        average_error_synapse[slices] += float(E)/self.counter_threshold
 
                     counter_synapse[slices][test] += 1
                     counter_neuron[input_slices] += 1
@@ -263,7 +260,8 @@ class FinalAlgorithm(algorithms.Algorithm):
                     test_matrix2=np.tensordot(counter_neuron[input_slices], test_matrix, axes=0)
 
                     test_00 = np.logical_and(test,test_matrix2)
-                    test_0 = np.logical_and(test_00,sliced_probs < 0.99)
+		    # Changed to 2 for p = 1
+                    test_0 = np.logical_and(test_00,sliced_probs < 2)
                     if False:
                         test_1 = np.logical_and(test_0,(E_matrix.T > self.error_coeff * average_error_neuron[input_slices].T).T)
                     else:
@@ -281,13 +279,14 @@ class FinalAlgorithm(algorithms.Algorithm):
                         average_error_synapse[slices][test_0] = 0
 
                     test_minimal = np.logical_and(delta_n_synapses > 0,sliced_n_syn < self.minimal_number_synapses)
-                    sliced_probs[test_minimal] = sliced_probs[test_minimal]*2
+                    sliced_probs[test_minimal] = sliced_probs[test_minimal]*(1./self.initial_probability)
                     
                 if step%10 == 0:
                     
                         # Rewriting with matrices 
                         test1 = self.probs > 0.01
-                        test2 = self.probs < 0.99
+                        # Changed to 2 for p = 1
+                        test2 = self.probs < 2
                         test3 = prune_synapse > 1.0
 
                         test = np.logical_and(test1,np.logical_and(test2,test3))
@@ -302,7 +301,7 @@ class FinalAlgorithm(algorithms.Algorithm):
                         self.n_synapses -= delta_n_synapses
 
                         test_minimal = np.logical_and(delta_n_synapses > 0,self.n_synapses < self.minimal_number_synapses)
-                        self.probs[test_minimal] = self.probs[test_minimal]*2
+                        self.probs[test_minimal] = self.probs[test_minimal]*(1./self.initial_probability)
 
                         
 
