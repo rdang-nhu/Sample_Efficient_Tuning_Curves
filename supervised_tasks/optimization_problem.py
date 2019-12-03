@@ -39,5 +39,6 @@ class OptimizationProblem:
             # Check that evertything is inside the bounds
             #assert(expected_output_val >= outlb)
             #assert(expected_output_val <= outrb)
+
         return
 

@@ -97,6 +97,12 @@ class FinalAlgorithm(algorithms.Algorithm):
         else:
             self.grid = False
 
+        if "circular" in algo_config and algo_config["circular"]=="true":
+            print("Circular bump")
+            self.circular = True
+        else:
+            self.circular = False
+
         # Scatter folder 
         self.scatter_folder = fig_folder+"scatter/"+str(int(time.time()))+"/"
         if(not os.path.exists(self.scatter_folder)):
@@ -215,7 +221,7 @@ class FinalAlgorithm(algorithms.Algorithm):
                 k_input,k_output = self.get_k_input_output(i0)
                 half_k_output = k_output//2
 
-                j0,slicing_bounds,slices,iterator = self.get_output(i0,k_input,k_output)
+                j0,slicing_bounds,_,_ = self.get_output(i0,k_input,k_output)
                 # Compute error
                 value,exp_value,E = self.compute_error(i0,j0)
 
@@ -227,59 +233,58 @@ class FinalAlgorithm(algorithms.Algorithm):
                           for j in range(len(j0[i])) ) for i in range(len(j0))]
 
                 for i in range(len(j0)):
-                    input_bounds = slicing_bounds[i]
+                    input_bounds = [s[i] for s in slicing_bounds]
                     middle_bounds = ((i,i+1),)
                     output_bounds = output_slicing_bounds[i]
-                    input_slices = self.get_slices(input_bounds)
+                    input_slices = [self.get_slices(b) for b in input_bounds]
                     middle_slices = self.get_slices(middle_bounds)
                     output_slices = self.get_slices(output_bounds)
-                    slices = input_slices+middle_slices+output_slices
+                    slices = [ inp_s+middle_slices+output_slices for inp_s in input_slices]
 
-                    sliced_probs = self.probs[slices]
-                    if(hasattr(self,'static') and self.static):
-                        prune_summand= float(k_output)/self.n_synapses[i0]/self.prune_constant
+                    for slice_index in range(len(slices)):
+                        sliced_probs = self.probs[slices[slice_index]]
+                        if(hasattr(self,'static') and self.static):
+                            prune_summand= float(k_output)/self.n_synapses[i0]/self.prune_constant
             
-                    prune_synapse[input_slices]= np.minimum(prune_synapse[input_slices] + prune_summand,1.1)
-                    average_error_neuron[input_slices] *= (1-self.alpha)
-                    average_error_neuron[input_slices] += E*self.alpha
+                        prune_synapse[input_slices[slice_index]]= np.minimum(
+                            prune_synapse[input_slices[slice_index]] + prune_summand,1.1)
+                        average_error_neuron[input_slices[slice_index]] *= (1-self.alpha)
+                        average_error_neuron[input_slices[slice_index]] += E*self.alpha
 
-                    activation_time_synapse[slices] = step
-                    test = sliced_probs > 0.01
-                    prune_synapse[slices][test] = 0.
+                        activation_time_synapse[slices[slice_index]] = step
+                        test = sliced_probs > 0.01
+                        prune_synapse[slices[slice_index]][test] = 0.
                     
-                    if(self.mode == 0):
-                        average_error_synapse[slices] *= (1-self.alpha_synapse)
-                        average_error_synapse[slices] += E*self.alpha_synapse
+                        if(self.mode == 0):
+                            average_error_synapse[slices[slice_index]] *= (1-self.alpha_synapse)
+                            average_error_synapse[slices[slice_index]] += E*self.alpha_synapse
 
-                    counter_synapse[slices][test] += 1
-                    counter_neuron[input_slices] += 1
+                        counter_synapse[slices[slice_index]][test] += 1
+                        counter_neuron[input_slices[slice_index]] += 1
 
-                    test_shape_1=np.shape(test)
-                    test_shape_2=test_shape_1[len(np.shape(counter_neuron)):(len(total_shape)+1)]
-                    test_matrix= np.full(test_shape_2, 1.0)
-                    test_matrix2=np.tensordot(counter_neuron[input_slices], test_matrix, axes=0)
+                        test_shape_1=np.shape(test)
+                        test_shape_2=test_shape_1[len(np.shape(counter_neuron)):(len(total_shape)+1)]
+                        test_matrix= np.full(test_shape_2, 1.0)
+                        test_matrix2=np.tensordot(counter_neuron[input_slices[slice_index]], test_matrix, axes=0)
 
-                    test_00 = np.logical_and(test,test_matrix2)
-		    # Changed to 2 for p = 1
-                    test_0 = np.logical_and(test_00,sliced_probs < 2)
-                    if False:
-                        test_1 = np.logical_and(test_0,(E_matrix.T > self.error_coeff * average_error_neuron[input_slices].T).T)
-                    else:
+                        test_00 = np.logical_and(test,test_matrix2)
+                # Changed to 2 for p = 1
+                        test_0 = np.logical_and(test_00,sliced_probs < 2)
                         test_1 = np.logical_and(test_0,(E> self.error_coeff * average_error_neuron[i0]))
 
-                    sliced_probs[test_1] = 0.
-                    
-                    axes = tuple(range(len(self.input_shape)+1,len(total_shape)))
-                    delta_n_synapses = np.sum(test_1,axis=axes)
+                        sliced_probs[test_1] = 0.
 
-                    sliced_n_syn = self.n_synapses[input_slices+middle_slices]
-                    sliced_n_syn -= delta_n_synapses
-                    counter_synapse[slices][test_0] = 0
-                    if(self.mode == 1):
-                        average_error_synapse[slices][test_0] = 0
+                        axes = tuple(range(len(self.input_shape)+1,len(total_shape)))
+                        delta_n_synapses = np.sum(test_1,axis=axes)
 
-                    test_minimal = np.logical_and(delta_n_synapses > 0,sliced_n_syn < self.minimal_number_synapses)
-                    sliced_probs[test_minimal] = sliced_probs[test_minimal]*(1./self.initial_probability)
+                        sliced_n_syn = self.n_synapses[input_slices[slice_index]+middle_slices]
+                        sliced_n_syn -= delta_n_synapses
+                        counter_synapse[slices[slice_index]][test_0] = 0
+                        if(self.mode == 1):
+                            average_error_synapse[slices[slice_index]][test_0] = 0
+
+                        test_minimal = np.logical_and(delta_n_synapses > 0,sliced_n_syn < self.minimal_number_synapses)
+                        sliced_probs[test_minimal] = sliced_probs[test_minimal]*(1./self.initial_probability)
                     
                 if step%10 == 0:
                     

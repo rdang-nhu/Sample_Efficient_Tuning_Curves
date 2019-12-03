@@ -229,31 +229,68 @@ class Algorithm:
         pypl.close()
         #pypl.show(block=True)
 
+    def get_activation(self,slicing_bounds):
+
+        #print(slicing_bounds)
+        slices = \
+            [tuple(slice(x, y, 1) for (x, y) in aux) for aux in slicing_bounds]
+        slices_2 = [tuple(list(slices[i]) + [slice(i, i + 1)]) for i in range(len(slices))]
+        iterator = \
+            [it.product(*[range(x, y) for (x, y) in aux]) for aux in slicing_bounds]
+
+        slices_shape = [tuple(
+            y - x for (x, y) in aux) for aux in slicing_bounds]
+        ones = [np.ones(aux) for aux in slices_shape]
+
+        sliced_probs = [self.probs[slices_2[i]] for i in range(len(slices))]
+        act_synapses = [np.random.random_sample(aux.shape) < aux
+                        for aux in sliced_probs]
+        activation = [np.tensordot(ones[i],
+                                   act_synapses[i],
+                                   len(slices_shape[i]))[0]
+                      for i in range(len(slices_shape))]
+
+        return activation,slices,iterator
+
     # Compute algorithm output (taken from multi_adaptive_k)
     def get_output(self,i0,k_input,k_output):
 
-
-            half_k_output = k_output//2
             half_k_input = k_input//2
-            slicing_bounds =\
-                [tuple(\
-                (max(i0[j]-half_k_input[i],0),
-                min(i0[j]+half_k_input[i]+1,self.input_shape[0]))\
-                        for j in range(len(i0))) for i in range(len(k_input))]
-            slices = \
-                [tuple(slice(x,y,1) for (x,y) in aux) for aux in slicing_bounds]
-            slices_2 = [tuple(list(slices[i])+[slice(i,i+1)]) for i in range(len(slices))] 
-            iterator =\
-                [it.product(*[range(x,y) for (x,y) in aux]) for aux in slicing_bounds]
+            length = self.input_shape[0]
 
-            # Multiply with tensor full of ones
-            slices_shape = [tuple(
-                    y-x for (x,y) in aux) for aux in slicing_bounds] 
-            ones = [np.ones(aux) for aux in slices_shape] 
-            sliced_probs = [self.probs[slices_2[i]] for i in range(len(slices))] 
-            act_synapses = [np.random.random_sample(aux.shape) < aux for aux in sliced_probs]
-            activation = [np.tensordot(ones[i],act_synapses[i],len(slices_shape[i]))[0] for i in range(len(slices_shape))]
+            # Get activation without circular option
+            if self.circular:
 
+                # Assume dimension is 1
+                slicing_bounds_0 = []
+                slicing_bounds_1 = []
+                for i in range(len(k_input)):
+                    if i0[0] - half_k_input[i] < 0:
+                        tup0 = ((0,i0[0]+half_k_input[i]+1),)
+                        tup1 = ((length+i0[0]-half_k_input[i],length),)
+                    elif i0[0] + half_k_input[i] + 1 > length:
+                        tup0 = ((0, i0[0] + half_k_input[i] + 1 - length),)
+                        tup1 = ((i0[0] - half_k_input[i], length),)
+                    else:
+                        tup0 = ((i0[0] - half_k_input[i], i0[0] + half_k_input[i] + 1),)
+                        tup1 = ((0,0),)
+                    slicing_bounds_0.append(tup0)
+                    slicing_bounds_1.append(tup1)
+
+                    activation0, slices,iterator = self.get_activation(slicing_bounds_0)
+                    activation1, _,_ = self.get_activation(slicing_bounds_1)
+                    activation = [activation0[i]+activation1[i] for i in range(len(activation0))]
+                    slicing_bounds = [slicing_bounds_0,slicing_bounds_1]
+            else:
+
+                slicing_bounds =\
+                    [tuple(\
+                    (max(i0[j]-half_k_input[i],0),
+                    min(i0[j]+half_k_input[i]+1,self.input_shape[0]))\
+                            for j in range(len(i0))) for i in range(len(k_input))]
+
+                activation,slices,iterator = self.get_activation(slicing_bounds)
+                slicing_bounds = [slicing_bounds]
             
             # Do the convolution on output
             n_dims = len(activation[0].shape)

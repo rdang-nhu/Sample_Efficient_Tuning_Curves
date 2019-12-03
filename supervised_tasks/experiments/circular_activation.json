@@ -1,0 +1,70 @@
+{
+	"common":{
+		"name": "circular_activation",
+		"runs": 10,
+		"M": 1032,
+		"n test":500,
+		"step test":32,
+		"n cross":1000
+	},
+	"functions":
+	[
+		{
+			"name": "sin",
+			"legend":"Sinus, periodic",
+			"input dimension":1,
+			"input bounds": [[0,6.283185]],
+			"output bounds":[-1.1,1.1]
+		},
+		{
+			"name": "sin",
+			"legend":"Sinus, aperiodic",
+			"input dimension":1,
+			"input bounds": [[-1.570796,1.570796]],
+			"output bounds":[-1.1,1.1]
+		}
+
+	],
+
+	"algorithms":
+	[
+
+		{
+			"type":"list",
+			"name": "FinalAlgorithm1",
+			"legend":"Circular Bump",
+			"circular": "true",
+			"alpha": 0.1,
+			"alpha synapse":0.5,
+			"prune_constant":3,
+			"k output factor":3,
+			"k input factor":3,
+			"minimal_number_synapses":5
+		},
+
+		{
+			"name": "FinalAlgorithm2",
+			"legend":"Bump",
+			"alpha": 0.1,
+			"alpha synapse":0.5,
+			"prune_constant":3,
+			"k output factor":3,
+			"k input factor":3,
+			"minimal_number_synapses":5
+		}
+	],
+	"mappings":
+	[
+		{
+			"input": {
+				"n":100,
+				"type":"linear"
+			},
+			"output": {
+				"n":100,
+				"type":"linear"
+			}
+		}
+	]
+
+}

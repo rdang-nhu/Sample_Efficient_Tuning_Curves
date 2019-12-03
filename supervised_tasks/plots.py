@@ -206,7 +206,7 @@ class Plotting_Environment:
             config = self.list_configs[i] 
             
             algo = config["algo"]["name"]
-            function = config["function"]["name"]
+            function = config["function"]["legend"]
             
             entry = [config,data]
             if(function in functions):
