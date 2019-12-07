@@ -20,6 +20,15 @@
 	"algorithms":
 	[
 		{
+			"name": "FinalAlgorithm14",
+			"legend":"Dynamic Bump",
+			"alpha": 0.1,
+			"prune_constant":3,
+			"k output factor":3.0,
+			"k input factor":3.0,
+			"minimal_number_synapses":5
+		},
+		{
 			"type":"list",
 			"name": "FinalAlgorithm1",
 			"legend":"K= 300",
@@ -29,8 +38,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":300
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -42,8 +50,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":250
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -55,8 +62,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":200
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -68,8 +74,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":150
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -81,8 +86,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":100
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -94,8 +98,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":80
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -107,8 +110,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":70
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -120,8 +122,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":60
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -133,8 +134,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":90
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -146,8 +146,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":140
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -159,8 +158,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":130
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -172,8 +170,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":120
+			"k input factor":[3.0]
 		},
 		{
 			"type":"list",
@@ -185,8 +182,7 @@
 			"alpha synapse":0.3,
 			"prune_constant":[3],
 			"k output factor":[3.0], 
-			"k input factor":[3.0],
-			"minimal_number_synapses":110
+			"k input factor":[3.0]
 		}
 	],
 	"mappings":

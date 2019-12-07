@@ -38,16 +38,6 @@ class FinalAlgorithm(algorithms.Algorithm):
         if(hasattr(self,'static') and self.static):
             self.k_static=algo_config['static']
 
-        # Average mode for synapses
-        if(not "mode" in algo_config or algo_config['mode'] == "exponential"):
-            self.mode = 0
-            self.alpha_synapse = algo_config['alpha synapse']
-
-        # Unsupported in final version
-        #elif(algo_config['mode'] == "average"):
-        #    self.mode = 1
-        else:
-            raise ValueError("Average mode has unvalid value")
         
         #Plot synapses
         if("plot synapses" in algo_config and algo_config["plot synapses"]==1):
@@ -166,14 +156,7 @@ class FinalAlgorithm(algorithms.Algorithm):
                     self.input_shape,
                     init_average_error)
 
-            # Average error for synapses
-            if(self.mode == 0):
-                average_error_synapse = np.full(
-                        total_shape,
-                        init_average_error)
-            else:
-                average_error_synapse = np.zeros(
-                        total_shape, dtype=float)
+           
 
             counter_synapse = np.zeros(total_shape)
             counter_neuron = np.zeros(self.input_shape)
@@ -255,9 +238,6 @@ class FinalAlgorithm(algorithms.Algorithm):
                         test = sliced_probs > 0.01
                         prune_synapse[slices[slice_index]][test] = 0.
                     
-                        if(self.mode == 0):
-                            average_error_synapse[slices[slice_index]] *= (1-self.alpha_synapse)
-                            average_error_synapse[slices[slice_index]] += E*self.alpha_synapse
 
                         counter_synapse[slices[slice_index]][test] += 1
                         counter_neuron[input_slices[slice_index]] += 1
@@ -280,8 +260,6 @@ class FinalAlgorithm(algorithms.Algorithm):
                         sliced_n_syn = self.n_synapses[input_slices[slice_index]+middle_slices]
                         sliced_n_syn -= delta_n_synapses
                         counter_synapse[slices[slice_index]][test_0] = 0
-                        if(self.mode == 1):
-                            average_error_synapse[slices[slice_index]][test_0] = 0
 
                         test_minimal = np.logical_and(delta_n_synapses > 0,sliced_n_syn < self.minimal_number_synapses)
                         sliced_probs[test_minimal] = sliced_probs[test_minimal]*(1./self.initial_probability)

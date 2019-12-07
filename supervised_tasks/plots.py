@@ -29,7 +29,7 @@ class Plotting_Environment:
         if not os.path.exists(self.folder):
             os.makedirs(self.folder)
         return
-    
+
     def convolve(self,array):
         return np.convolve(array,np.ones((self.window,))/self.window,'valid')
 
@@ -84,15 +84,15 @@ class Plotting_Environment:
 
         for i in range(self.n_configs):
             data = self.list_datas[i]
-            config = self.list_configs[i] 
-            
+            config = self.list_configs[i]
+
             label = self.get_label(config)
 
             pypl.plot(range(data['convolution_length']),
                     data['moving_average'],label=label)
 
         self.plot()
-        pypl.title("Evolution of Error (Running Average)") 
+        pypl.title("Evolution of Error (Running Average)")
         pypl.savefig(self.folder+"group_error.png",dpi=2000)
         pypl.close()
 
@@ -113,8 +113,8 @@ class Plotting_Environment:
 
         for i in range(self.n_configs):
             data = self.list_datas[i]
-            config = self.list_configs[i] 
-            
+            config = self.list_configs[i]
+
             label = self.get_label(config)
 
             x1,y1,std1 = self.dict_to_array(data["mean_batch_error_1"],data["std_batch_error_1"])
@@ -125,12 +125,12 @@ class Plotting_Environment:
                 color1 = "C0"
                 color2 = "C1"
                 color = "C2"
-                name = "Bump, " 
+                name = "Bump, "
             else:
                 color1 = "C2"
                 color2 = "C3"
                 name = "NN, "
-            
+
             label1 = "Random short-distance target"
             label2 = "Random long-distance target"
             label3 = "Random target"
@@ -147,7 +147,7 @@ class Plotting_Environment:
         pypl.text(750,0.3,'Training on long\ndistance target',size='medium',horizontalalignment='center')
         pypl.ylabel("Error")
         pypl.xlabel("Number of training samples")
-        pypl.title("Throw ball") 
+        pypl.title("Throw ball")
         self.plot(8)
         pypl.xlim(left=-50)
         pypl.savefig(self.folder+"incremental_error.png",dpi=1000)
@@ -158,21 +158,21 @@ class Plotting_Environment:
 
         for i in range(self.n_configs):
             data = self.list_datas[i]
-            config = self.list_configs[i] 
-            
+            config = self.list_configs[i]
+
             label = self.get_label(config)
 
             pypl.plot(range(data['convolution_length']),
                     data['moving_average'],label=label)
 
-        pypl.title("Evolution of Error (Running Average)") 
+        pypl.title("Evolution of Error (Running Average)")
         self.plot()
         pypl.savefig(self.folder+"group_error.png",dpi=2000)
-        
+
 
     # Function to generate a plot with comparison of k in all experimental configs
     def group_k_plot(self,start_index):
-        
+
         if('dimension' in self.list_configs[0]['mapping']['output']):
             self.dim = self.list_configs[0]['mapping']['output']['dimension']
         else:
@@ -184,13 +184,13 @@ class Plotting_Environment:
 
             for i in range(self.n_configs):
                 data = self.list_datas[i]
-                config = self.list_configs[i] 
+                config = self.list_configs[i]
 
                 label = self.get_label(config)
 
                 pypl.plot(range(data['convolution_length']),
                         data['k_mov_average'][index],label=label)
-        
+
             pypl.title("Evolution of K (Running Average), dimension: "+str(index))
             self.plot()
             pypl.savefig(self.folder+"group_k_dimension_"+str(index)+".png",dpi=2000)
@@ -203,11 +203,11 @@ class Plotting_Environment:
         for i in range(self.n_configs):
 
             data = self.list_datas[i]
-            config = self.list_configs[i] 
-            
+            config = self.list_configs[i]
+
             algo = config["algo"]["name"]
             function = config["function"]["legend"]
-            
+
             entry = [config,data]
             if(function in functions):
                 if(algo in functions[function]):
@@ -225,7 +225,7 @@ class Plotting_Environment:
             label = self.get_label(config)
 
         return functions, coeffs
-    
+
     # Function to convert legend
     def convert_legend(self,legend):
         if(legend == "NN"):
@@ -240,14 +240,14 @@ class Plotting_Environment:
 
     # Function to generate a plot with comparison of k in all experimental configs
     def benchmark(self,start_index):
-        
+
         functions,coeffs = self.get_f_c()
 
-        i = 0 
+        i = 0
         for function in functions:
             self.start_fig(i)
             i = i+1
-            for (algo,entries) in functions[function].items(): 
+            for (algo,entries) in functions[function].items():
 
                 # Find entry with minimum cross error
                 minimum = math.inf
@@ -256,7 +256,7 @@ class Plotting_Environment:
                     if(np.mean(data["cross_error"])<minimum):
                         minimum = np.mean(data["cross_error"])
                         min_entry = entry
-        
+
                 print("\n")
                 print("Function",function)
                 pprint.pprint(min_entry[0]["algo"],width=1)
@@ -274,7 +274,7 @@ class Plotting_Environment:
                 name = entry[0]["algo"]["name"]
                 print(name)
                 color = self.get_color(name)
-                
+
                 test_name = entry[0]["algo"]["name"]
                 if(test_name != "AS" and not "one" in test_name):
                     x = x[:36]
@@ -299,7 +299,7 @@ class Plotting_Environment:
 
 
         return
-    
+
 
     def get_time(self,x,y,std):
 
@@ -315,17 +315,34 @@ class Plotting_Environment:
                 time = i
                 return perf,x[time],std[time]
 
+    def get_time_dynamic(self, x, y, std):
+
+        errs = []
+        times = []
+        thresholds = list(np.arange(0.09,0,-0.01))+[0.025,0.022]
+        for error in thresholds:
+            for i in range(len(x)):
+
+                if (y[i] < 1.5 * error):
+                    time = i
+                    errs.append(error)
+                    times.append(x[time])
+                    break
+
+        return errs,times
 
     # Function to generate second comp k plot
     def comp_k(self,start_index):
-        
+
         functions,coeffs = self.get_f_c()
 
-        i = 0 
+        i = 0
         for function in functions:
             self.start_fig(i)
             i = i+1
-            for (algo,entries) in functions[function].items(): 
+
+            test = True
+            for (algo,entries) in functions[function].items():
 
                 # Find entry with minimum cross error
                 minimum = math.inf
@@ -334,7 +351,7 @@ class Plotting_Environment:
                     if(np.mean(data["cross_error"])<minimum):
                         minimum = np.mean(data["cross_error"])
                         min_entry = entry
-        
+
                 print("\n")
                 print("Function",function)
                 pprint.pprint(min_entry[0]["algo"],width=1)
@@ -349,29 +366,59 @@ class Plotting_Environment:
                     label = entry[0]["algo"]["name"]
 
                 name = entry[0]["algo"]["name"]
-                print(name)
-                color = self.get_color(name)
+                if "static" in entry[0]["algo"]:
 
-                    
-                final_performance,time,err = self.get_time(x,y,std)
-                #pypl.errorbar(time,final_performance,yerr=err,capsize=5,marker='+',color="C0",markersize=15)
-                pypl.plot(time,final_performance,marker='+',color="C0",markersize=15)
-                if("150" in label):
-                    delta = -0.001
-                    deltax = -70
-                elif("140" in label):
-                    delta = -0.002
-                    deltax = -70
-                elif("130" in label):
-                    delta = -0.001
-                    deltax = 30
-                elif(len(label) < 6):
-                    delta = -0.0015
-                    deltax = -55
-                else: 
-                    delta = -0.0015
-                    deltax = -70
-                pypl.annotate(label[3:],(time+deltax,final_performance+delta))
+                    final_performance,time,err = self.get_time(x,y,std)
+                    #pypl.errorbar(time,final_performance,yerr=err,capsize=5,marker='+',color="C0",markersize=15)
+                    if test:
+                        pypl.plot(time,final_performance,
+                        marker='+',color="C0",
+                        markersize=15,label="Static Bump (bump size)",linestyle="None")
+                        test = False
+                    else:
+                        pypl.plot(time,final_performance,
+                        marker='+',color="C0",
+                        markersize=15)
+
+                    if("150" in label):
+                        delta = 0
+                        deltax = 30
+                    elif("140" in label):
+                        delta = -0.004
+                        deltax = -70
+                    elif("130" in label):
+                        delta = -0.001
+                        deltax = 30
+                    elif("120" in label):
+                        delta = -0.007
+                        deltax = -15
+                    elif("110" in label):
+                        delta = -0.003
+                        deltax = 30
+                    elif("100" in label):
+                        delta = 0.002
+                        deltax = -50
+                    elif("80" in label):
+                        delta = -0.0015
+                        deltax = 30
+                    elif("60" in label):
+                        delta = 0.003
+                        deltax = -15
+                    elif(len(label) < 6):
+                        delta = -0.0015
+                        deltax = -55
+                    else:
+                        delta = -0.0015
+                        deltax = -70
+                    pypl.annotate(label[3:],(time+deltax,final_performance+delta))
+
+                else:
+                    perfs,times = self.get_time_dynamic(x, y, std)
+                    print(perfs)
+                    print(times)
+                    pypl.plot(times,perfs,
+                    marker="+",label="Dynamic Bump",
+                    color="C1",markersize=15,linestyle="None")
 
             pypl.xlabel("Number of training samples to reach final error")
             pypl.ylabel("Final error")
@@ -396,8 +443,8 @@ class Plotting_Environment:
         for i in range(self.n_configs):
 
             data = self.list_datas[i]
-            config = self.list_configs[i] 
-            
+            config = self.list_configs[i]
+
             test_error = data["mean_batch_error"]
             test_std = data["std_batch_error"]
             x,y,std = self.dict_to_array(test_error,test_std)
@@ -424,10 +471,10 @@ class Plotting_Environment:
 
 
             data = self.list_datas[i]
-            config = self.list_configs[i] 
-            
+            config = self.list_configs[i]
+
             function = config["function"]["name"]
-                
+
             label = self.get_label(config)
 
             layer_width = config["algo"]["width layers"]
@@ -440,11 +487,11 @@ class Plotting_Environment:
                 functions[function] = [entry]
                 if("coeffs" in config["function"]):
                     coeffs[function] = config["function"]["coeffs"]
-    
+
 
         with open(self.folder+"benchmark.txt","w") as f:
             columns = ["Layer Width","Learning Rate","Cross Error","Test Error"]
-            for function in functions: 
+            for function in functions:
                 df = pd.DataFrame(functions[function],columns=columns)
                 df = df.sort_values(by=["Cross Error"])
 
@@ -458,7 +505,7 @@ class Plotting_Environment:
                 f.write(df.to_string(index=False))
 
 
-            
+
 
     # Function to generate folder name
     def get_folder_name(self,M,alpha,conf_coeff):
@@ -472,7 +519,7 @@ class Plotting_Environment:
 
         # Open files
         with open(file_name,"r") as f:
-            
+
 
             moving_average = self.convolve(errors)
 
@@ -502,11 +549,11 @@ class Plotting_Environment:
             pypl.savefig(fig_folder+function+"_"+str(i),dpi=1000)
 
 
-        
+
     # Function to plot the adaptive k error
     def error_plotter_adaptive_k(self,file_name,fig_index):
 
-            
+
             # Where to save the images
             plots_folder = self.get_folder_name(M,alpha,conf_coeff)
 
@@ -541,7 +588,7 @@ class Plotting_Environment:
                 right = self.convolve(errors_right)
                 pypl.plot(range(len(left)),left,label="Left Error")
                 pypl.plot(range(len(right)),right,label="Right Error")
-            else: 
+            else:
                 pypl.plot(range(len(moving_average)),moving_average,label="Error")
             #pypl.plot(range(M),av_error,label="Average Error")
             pypl.xlabel("Step")
@@ -555,7 +602,7 @@ class Plotting_Environment:
                 right = self.convolve(k_right)
                 pypl.plot(range(len(left)),left,label="Left K")
                 pypl.plot(range(len(right)),right,label="Right K")
-            else: 
+            else:
                 pypl.plot(range(len(k_mov_average)),k_mov_average,label="K")
                 pypl.plot(th_step,th_k_ev,label="neuron_number/sqrt(t)",color='r')
             pypl.xlabel("Step")
@@ -609,10 +656,9 @@ class Plotting_Environment:
         # Iterate over perf files
         i = 0
         for filename in os.listdir(folder):
-            
+
             item = folder+filename
             if(os.path.isfile(item)):
                 plotter(item,i)
                 i = i+1
         return folder
-
