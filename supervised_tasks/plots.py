@@ -477,10 +477,11 @@ class Plotting_Environment:
 
             label = self.get_label(config)
 
-            layer_width = config["algo"]["width layers"]
-            learn_rate = config["algo"]["learning rate"]
+            pc = config["algo"][self.parameter]
+            if self.parameter == "prune_constant":
+                pc *= 4
 
-            entry = [layer_width,learn_rate,np.mean(data["cross_error"]),np.mean(data["test_error"])]
+            entry = [pc,np.mean(data["cross_error"]),np.std(data["cross_error"])]
             if(function in functions):
                 functions[function].append(entry)
             else:
@@ -489,20 +490,13 @@ class Plotting_Environment:
                     coeffs[function] = config["function"]["coeffs"]
 
 
-        with open(self.folder+"benchmark.txt","w") as f:
-            columns = ["Layer Width","Learning Rate","Cross Error","Test Error"]
+        with open(self.folder+"benchmark_"+self.parameter+".txt","w") as f:
+            columns = [self.column,"Mean","Std"]
             for function in functions:
                 df = pd.DataFrame(functions[function],columns=columns)
-                df = df.sort_values(by=["Cross Error"])
+                df = df.sort_values(by=["Mean"])
 
-                f.write("\n")
-                f.write(function)
-                f.write("\n")
-                if(function in coeffs):
-                    f.write("Coeffs: ")
-                    f.write(str(coeffs[function]))
-                    f.write("\n")
-                f.write(df.to_string(index=False))
+                f.write(df.to_latex(index=False))
 
 
 

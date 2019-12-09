@@ -1,0 +1,109 @@
+{
+	"common":{
+		"name": "comparion_prune_constant",
+		"runs": 10,
+		"M": 1032,
+		"n test":50,
+		"step test":320,
+		"n cross":1000
+	},
+	"functions":
+	[
+		{
+			"name": "sin",
+			"legend":"Sinus",
+			"input dimension":1,
+			"input bounds": [[1,3]],
+			"output bounds":[-1.1,1.1]
+		}
+	],
+	"algorithms":
+	[
+		{
+			"name": "FinalAlgorithm1",
+			"legend":"2",
+			"alpha": 0.1,
+			"prune_constant":2,
+			"k output factor":4.0,
+			"k input factor":4.0,
+			"minimal_number_synapses":5
+		},
+    {
+			"name": "FinalAlgorithm2",
+			"legend":"3",
+			"alpha": 0.1,
+			"prune_constant":3,
+			"k output factor":4.0,
+			"k input factor":4.0,
+			"minimal_number_synapses":5
+		},
+    {
+			"name": "FinalAlgorithm3",
+			"legend":"4",
+			"alpha": 0.1,
+			"prune_constant":4,
+			"k output factor":4.0,
+			"k input factor":4.0,
+			"minimal_number_synapses":5
+		},
+    {
+			"name": "FinalAlgorithm4",
+			"legend":"5",
+			"alpha": 0.1,
+			"prune_constant":5,
+			"k output factor":4.0,
+			"k input factor":4.0,
+			"minimal_number_synapses":5
+		},
+    {
+			"name": "FinalAlgorithm5",
+			"legend":"7",
+			"alpha": 0.1,
+			"prune_constant":7,
+			"k output factor":4.0,
+			"k input factor":4.0,
+			"minimal_number_synapses":5
+		},
+    {
+			"name": "FinalAlgorithm6",
+			"legend":"8",
+			"alpha": 0.1,
+			"prune_constant":8,
+			"k output factor":4.0,
+			"k input factor":4.0,
+			"minimal_number_synapses":5
+		},
+    {
+			"name": "FinalAlgorithm7",
+			"legend":"9",
+			"alpha": 0.1,
+			"prune_constant":9,
+			"k output factor":4.0,
+			"k input factor":4.0,
+			"minimal_number_synapses":5
+		},
+    {
+			"name": "FinalAlgorithm10",
+			"legend":"10",
+			"alpha": 0.1,
+			"prune_constant":10,
+			"k output factor":4.0,
+			"k input factor":4.0,
+			"minimal_number_synapses":5
+		}
+	],
+	"mappings":
+	[
+		{
+			"input": {
+				"n":100,
+				"type":"linear"
+			},
+			"output": {
+				"n":100,
+				"type":"linear"
+			}
+		}
+	]
+
+}
