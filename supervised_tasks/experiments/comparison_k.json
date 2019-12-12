@@ -4,12 +4,12 @@
 		"runs": 10,
 		"M": 1001,
 		"n test":300,
-		"step test":50,
+		"step test":25,
 		"n cross":1000
 	},
 	"functions":
 	[
-		{ 
+		{
 			"name": "identity",
 			"legend":"Identity Function",
 			"input dimension":1,
@@ -37,7 +37,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -49,7 +49,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -61,7 +61,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -73,7 +73,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -85,7 +85,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -97,7 +97,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -109,7 +109,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -121,7 +121,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -133,7 +133,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -145,7 +145,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -157,7 +157,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -169,7 +169,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		},
 		{
@@ -181,7 +181,7 @@
 			"alpha": 0.1,
 			"alpha synapse":0.3,
 			"prune_constant":[3],
-			"k output factor":[3.0], 
+			"k output factor":[3.0],
 			"k input factor":[3.0]
 		}
 	],
@@ -198,6 +198,5 @@
 			}
 		}
 	]
-	
-}
 
+}

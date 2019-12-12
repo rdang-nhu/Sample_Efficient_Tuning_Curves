@@ -319,7 +319,7 @@ class Plotting_Environment:
 
         errs = []
         times = []
-        thresholds = list(np.arange(0.09,0,-0.01))+[0.025,0.022]
+        thresholds = list(np.arange(0.09,0,-0.02))+[0.02]
         for error in thresholds:
             for i in range(len(x)):
 
@@ -380,36 +380,37 @@ class Plotting_Environment:
                         marker='+',color="C0",
                         markersize=15)
 
-                    if("150" in label):
-                        delta = 0
-                        deltax = 30
-                    elif("140" in label):
-                        delta = -0.004
+                    if("300" in label):
+                        delta = -0.0015
                         deltax = -70
+                    elif("150" in label):
+                        delta = 0.003
+                        deltax = -20
+                    elif("140" in label):
+                        delta = -0.006
+                        deltax = -20
                     elif("130" in label):
                         delta = -0.001
-                        deltax = 30
+                        deltax = 20
                     elif("120" in label):
-                        delta = -0.007
-                        deltax = -15
-                    elif("110" in label):
-                        delta = -0.003
+                        delta = 0
                         deltax = 30
+                    elif("110" in label):
+                        delta = -0.006
+                        deltax = -30
                     elif("100" in label):
                         delta = 0.002
-                        deltax = -50
+                        deltax = 15
                     elif("80" in label):
                         delta = -0.0015
                         deltax = 30
-                    elif("60" in label):
-                        delta = 0.003
-                        deltax = -15
+
                     elif(len(label) < 6):
                         delta = -0.0015
                         deltax = -55
                     else:
                         delta = -0.0015
-                        deltax = -70
+                        deltax = -80
                     pypl.annotate(label[3:],(time+deltax,final_performance+delta))
 
                 else:
@@ -494,6 +495,25 @@ class Plotting_Environment:
             columns = [self.column,"Mean","Std"]
             for function in functions:
                 df = pd.DataFrame(functions[function],columns=columns)
+
+
+                df = df.sort_values(by=[self.column])
+
+                x = df[self.column].values
+                y = df["Mean"].values
+                std = df["Std"].values
+                pypl.plot(x,y)
+                pypl.fill_between(x,y-std,y+std,alpha=0.2)
+                pypl.xlabel(self.column)
+                pypl.xticks(x)
+                pypl.ylabel("Error")
+                pypl.xscale("log")
+
+                pypl.title("Sinus")
+                pypl.savefig(self.folder+"benchmark_"+self.parameter+".png")
+
+
+
                 df = df.sort_values(by=["Mean"])
 
                 f.write(df.to_latex(index=False))
